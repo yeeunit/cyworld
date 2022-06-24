@@ -1,0 +1,96 @@
+*{
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+.body{
+    display: flex;
+}
+
+/* (질문) "bodywrap": Unknown word. 는 왜뜨는 거죠?? */
+
+.bodywrap{
+    width: 670px;
+    height: 960px;
+    background: #FFFFFF;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    padding: 90px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+h1{
+    color: #0068FF;
+    line-height: 50px;
+}
+
+/* 개인정보 */
+.personal_info{
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0px 20px 0px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 40px;
+}
+/* input 스타일이 다 먹히지 않음 */
+
+
+/* 성별 */
+.gender{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row; 
+    padding: 0 150px 0 150px;
+}
+.female, .male{
+    font-size: 18px;
+        /* 왜 justify로 정렬이 안될까...  */
+}
+
+.gender input{
+    width: 15px;
+    height: 15px;
+}
+
+.checkbox{
+    width: 100%;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.checkbox input{
+    width: 20px;
+    height: 20px;
+        /* 왜 정렬이 안될까...  */
+}
+
+/* 가입하기 */
+.join{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #0068FF;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+}
+.join button{
+    font-size: 18px;
+    color: #0068FF;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+
+
+
+

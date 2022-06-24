@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    color: #55B2E4;
+    font-size: 14px;
+    font-weight: 700;
+}
+.subtitle{
+    font-size: 7px;
+    padding-left: 10px;
+    color: rgb(40, 40, 40);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+/* 업데이트 뉴스 라인 */
+.dividedLine{
+    width: 100%;
+    border-top: 1px rgb(150, 150, 150) solid;
+    margin: 5px 0px;
+}
+
+.game__container {
+    width: 222px;
+    height: 168px;
+    background-color: #f6f6f6; 
+    border: 1px solid gray;   
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* 게임 제목 */
+.game__title {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.game__subtitle {
+    font-size: 11px;
+    color:rgb(150, 150, 150);
+    font-weight: 500;
+}
+
+.word__textbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0px 8px;
+}
+
+.textbox{
+    width: 130px;
+    height: 24px;
+    border-radius: 5px;
+    font-size: 11px;
+    padding-left: 10px;
+
+}
+
+/* 검색 */
+.submit {
+    width: 38px;
+    height: 24px;
+    font-size: 11px;
+    font-weight: 800;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* 결과 */
+
+.word__result{
+    font-size: 11px;
+    font-weight: 600;
+    color: gray;
+}
+
+
+/* 숫자 */
+.number__box{
+    width: 130px;
+    height: 21px;
+    background-color: #FFE400;
+    border: 1.5px solid black;
+    border-radius: 6px;
+}
+
+.number {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.number > li {
+    font-size: 11px;
+    font-weight: 800;
+
+}
+
+.number >li a{
+    color: #000000;
+    
+}
+
+.number a:hover{
+    color: red;
+}
+
+
+/* 버튼 */
+.button {
+    width: 62px;
+    height: 22px;
+    font-size: 11px;
+    font-weight: 900;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}

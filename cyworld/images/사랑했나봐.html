@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!-- bgsweb-www904 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="음악,음악 스트리밍,최신음악,인기가요,뮤직비디오,앨범,플레이어,mp3 다운로드,놀면뭐하니,유플래쉬,유플래시" />
+
+<script type="text/javascript">
+	if(!(location.href.indexOf("music.bugs.co.kr/newPlayer") >= 0 || location.href.indexOf("music.bugs.co.kr/newRadio") >= 0 || location.href.indexOf("localhost") >= 0))
+		document.domain = 'bugs.co.kr';
+
+	var g_urlBase = "https://www.bugs.co.kr";
+	var g_urlWww = "https://www.bugs.co.kr";
+	var g_urlSecure = "https://secure.bugs.co.kr";
+	var g_urlMusic = "https://music.bugs.co.kr";
+	var g_urlMusicSecure = "https://music.bugs.co.kr";
+	var g_urlMember = "https://secure.bugs.co.kr/member";
+	var g_urlFile = "https://file.bugsm.co.kr/wbugs";
+	var g_urlFile_n ="https://file.bugsm.co.kr/nbugs"; 
+	//var g_urlSwf = "https://music.bugs.co.kr/swf";
+	var g_urlSwf = "https://music.bugs.co.kr/swf";
+	var g_urlJs = "/js";
+	var g_urlMe = "https://music.bugs.co.kr/user";
+	var g_urlThumbnail = "http://nboardr.bugs.co.kr/thumbnail";
+	var g_urlOpenalbum = "https://music.bugs.co.kr/openalbum";
+	var g_urlClipimg = "//image.bugsm.co.kr";
+	//var g_urlLikes = "https://music.bugs.co.kr/like";
+	//var g_urlPlaylists = "https://music.bugs.co.kr/playlist";
+	var g_urlLikes = "https://music.bugs.co.kr/like";
+	var g_urlPlaylists = "https://music.bugs.co.kr/playlist"
+	var g_urlListen = "https://music.bugs.co.kr/listen";
+	var g_urlMyinfo = "https://music.bugs.co.kr/myinfo";
+	var g_urlSecureMyinfo = "https://secure.bugs.co.kr/myinfo";
+	var g_urlSearch = "https://music.bugs.co.kr/search";
+	var g_urlChart = "https://music.bugs.co.kr/chart";
+	var g_urlPay = "https://music.bugs.co.kr/pay";
+	var g_urlBilling = "https://pay.bugs.co.kr";
+	var g_urlPartner = "https://www.bugs.co.kr/Partner";
+	var g_urlSecurePay = "https://secure.bugs.co.kr/pay";
+	var g_urlOtu = "https://notu.bugs.co.kr";
+	var g_urlBoard = "http://board.bugs.co.kr/notice";
+	var g_urlEvent = "https://music.bugs.co.kr/event";		
+	var g_storageServerRead = "http://nboardr.bugs.co.kr";
+	var g_storageServerWrite = "https://nboardw.bugs.co.kr";
+    var g_storageServerFileUploadTmp = g_storageServerWrite+"/adminimg/storage/upload";
+	var g_urlPanel = "https://music.bugs.co.kr/panel";
+	var g_urlAjax = "https://music.bugs.co.kr";
+	var g_urlAppsvr = "https://music.bugs.co.kr";
+	var g_urlMusicPd = "https://music.bugs.co.kr/musicpd";
+	var g_urlGenre = "https://music.bugs.co.kr/genre";
+	var g_urlMLounge = "https://mlounge.bugs.co.kr";
+	var g_urlNinanoclub = "http://ninanoclub.bugs.co.kr";
+	var g_urlM = "https://m.bugs.co.kr";
+	var g_urlDl = "https://dl.bugs.co.kr";
+	var g_urlBGT = "https://bgt.bugs.co.kr";
+	
+	var g_env = "svc";
+
+	var g_isLogged = false;
+	var g_msrl = false;
+	var g_isGuest = false;
+</script>
+<!-- cache.filePacking : true -->
+
+<!-- bugs file packing [ open_lib_js ] cached data / start -->
+<script type='text/javascript' src='//music.bugs.co.kr/filepacking/open_lib_js?env=svc&_t_s_=20220623-2139' ></script>
+<!-- bugs file packing [ open_lib_js ] cached data / end -->
+
+
+<!-- bugs file packing [ bugs_desktopLib_js ] cached data / start -->
+<script type='text/javascript' src='//music.bugs.co.kr/filepacking/bugs_desktopLib_js?env=svc&_t_s_=20220623-2139' ></script>
+<!-- bugs file packing [ bugs_desktopLib_js ] cached data / end -->
+
+
+<!-- bugs file packing [ bugs_newLib_js ] cached data / start -->
+<script type='text/javascript' src='//music.bugs.co.kr/filepacking/bugs_newLib_js?env=svc&_t_s_=20220623-2139' ></script>
+<!-- bugs file packing [ bugs_newLib_js ] cached data / end -->
+
+
+<!-- clova issue로 분기 -->
+<script type="text/javascript" src="/js/swfobject/swfobject.js"></script>
+
+<!-- java enum to js -->
+<script type="text/javascript" src="https://music.bugs.co.kr/js/enumtojs"></script>
+
+<script type="text/javascript" src="/js/utils/personMedia.js?version=20161212"></script>
+<script type="text/javascript" src="/js/me/playlist.js?version=20151102"></script>
+<script type="text/javascript" src="/js/log/makePCookie.js"></script>
+
+<script type="text/javascript" src="/js/player/min/mvHtml5Player.min.js?version=20220623:2139"></script>
+
+<!-- <script type="text/javascript" src="/js/utils/fileUploader.js"></script> -->
+
+<script type="text/javascript" src="/js/lib/kakao.min.js"></script>	<!-- <script type="text/javascript" src="/js/lib/kakao.story.min.js"></script> -->
+
+<!--[if gt IE 7]>
+	<script type="text/javascript" src="/js/jquery/jquery.ba-hashchange.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="/js/html5/html5shiv.min.js"></script>
+	<script type="text/javascript" src="/js/json2.js"></script>
+<![endif]-->
+
+
+<!-- bugs file packing [ bugs_commonStyle_css ] cached data / start -->
+<link rel='stylesheet' type='text/css' href='//music.bugs.co.kr/filepacking/bugs_commonStyle_css?env=svc&_t_s_=20220623-2139' />
+<!-- bugs file packing [ bugs_commonStyle_css ] cached data / end -->
+
+	
+
+
+
+
+
+		
+
+
+		<meta name="description" content="벅스에서 지금 감상해 보세요." />
+
+		<!-- open graph -->
+		<meta property="fb:app_id" content="122936701116206" />
+		<meta property="og:title" content="사랑했나봐 / 윤도현"/>
+		<meta property="og:url" content="https://music.bugs.co.kr/track/80089182"/>
+		<meta property="og:image" content="https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg" />
+		<meta property="og:site_name" content="벅스!"/>
+		<meta property="og:description" content="벅스에서 지금 감상해 보세요."/>
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="ko_KR" />
+		
+		<!-- app link -->
+		<meta property="al:ios:url" content="https://music.bugs.co.kr/track/80089182" />
+		<meta property="al:ios:app_store_id" content="348555322" />
+		<meta property="al:ios:app_name" content="벅스(ios)" />
+		<meta property="al:iphone:url" content="https://music.bugs.co.kr/track/80089182" />
+		<meta property="al:iphone:app_store_id" content="348555322" />
+		<meta property="al:iphone:app_name" content="벅스(iphone)" />
+		<meta property="al:ipad:url" content="https://music.bugs.co.kr/track/80089182" />
+		<meta property="al:ipad:app_store_id" content="420598915" />
+		<meta property="al:ipad:app_name" content="벅스(ipad)" />
+		<meta property="al:android:url" content="https://music.bugs.co.kr/track/80089182">
+		<meta property="al:android:package" content="com.neowiz.android.bugs">
+		<meta property="al:android:app_name" content="벅스(android)">
+		<meta property="al:web:url" content="https://music.bugs.co.kr/track/80089182" />
+		
+		<!-- twitter card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="https://music.bugs.co.kr/track/80089182">
+		<meta name="twitter:site" content="@Bugs_play">
+		<meta name="twitter:title" content="사랑했나봐 / 윤도현">
+		<meta name="twitter:description" content="벅스에서 지금 감상해 보세요.">
+		<meta name="twitter:image:src" content="https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg">
+		<meta name="twitter:app:name:iphone" content="벅스">
+		<meta name="twitter:app:name:ipad" content="벅스">
+		<meta name="twitter:app:name:googleplay" content="벅스">
+		<meta name="twitter:app:url:iphone" content="https://music.bugs.co.kr/track/80089182">
+		<meta name="twitter:app:url:ipad" content="https://music.bugs.co.kr/track/80089182">
+		<meta name="twitter:app:url:googleplay" content="https://music.bugs.co.kr/track/80089182">
+		<meta name="twitter:app:id:iphone" content="348555322">
+		<meta name="twitter:app:id:ipad" content="420598915">
+		<meta name="twitter:app:id:googleplay" content="com.neowiz.android.bugs">
+		
+		<link rel="image_src" href="https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg" />
+		<meta content="https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg" itemprop="image">
+		
+		<!-- bugs.sns 용 공유 파라미터 -->
+		<script>
+			var bugsSnsParam = {
+		 			url : "https://music.bugs.co.kr/track/80089182",
+		 			text : "사랑했나봐 / 윤도현",
+		 			img : "https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg",
+		 			hashTag : "#슈퍼사운드 #벅스 #윤도현",
+		 			corner : "벅스"
+		 		}
+		</script>
+
+		<script>
+      		 var bugsSnsParam2 = {
+                        url : "https://music.bugs.co.kr/track/80089182",
+                        text : "#2018_우리가_사랑한_음악",
+                        img : "https://image.bugsm.co.kr/album/images/500/80079/8007941.jpg",
+                        hashTag : "#슈퍼사운드 #벅스 #윤도현",
+                        corner : "벅스"
+                    }
+		</script>
+
+
+		
+	
+	
+
+<meta property="sc:artist_nm" content="윤도현"/>
+<meta property="sc:album_title" content="Difference"/>
+<meta property="sc:track_no" content="1"/>
+<meta property="sc:track_title" content="사랑했나봐"/>
+
+<link rel="alternate" href="android-app://com.neowiz.android.bugs/bugs3/app/tracks/80089182?miniplay=Y" />
+<script type="text/javascript" src="/js/utils/paging.js?version=201506111150"></script>
+<script type="text/javascript" src="/js/m/kakao-1.0.8.min.js?version=201503251403"></script>
+
+<script>
+var pAritistPopFlag = false;
+
+$(window.document).ready(function() {
+	RecommendClickLog.setDefaultValue();
+	RecommendClickLog.setCardType("SIMILAR");
+	RecommendClickLog.setServiceType("associated_item");
+
+	sendClickInfoLog = function(location, seed_id, item_type, item_id, target_type, target_id, action_type){
+		params = {};
+		this.params.location = location;
+		this.params.seed_item_id = seed_id;
+		this.params.item_type = item_type;
+		this.params.item_id = item_id;
+		this.params.target_item_type = target_type;
+		this.params.target_item_id = target_id;
+		this.params.action_type = action_type;
+		this.params.sendTrigger = true;
+
+		RecommendClickLog.sendLogParams(params);
+	};
+
+
+	/* 참여아티스트 */
+	$('.layer.participatingArtists').css("visibility", "hidden");
+	$('.summaryTrack .info a.btnMoreArtists').click(function(ev) {
+		ev.preventDefault();
+		$('.layer.participatingArtists').css("visibility", "");
+
+		if(!pAritistPopFlag)
+			bugs.scroll.setScrollBar(".participatingArtists .innerScroll", true);
+
+		pAritistPopFlag = true;
+	});
+
+	// 자동 재생
+
+	// 일반 가사 신청
+	$('div.lyricsContainer a.btnReqLyricsNormal').click(function(e) {
+		// 가사 신청 시 로그인 체크하기
+			alert("로그인 후, 신청하실 수 있습니다.");
+			return false;
+
+		requestLyrics(80089182, "N");
+		return false;
+	});
+
+	// 실시간 가사 신청
+	$('div.lyricsContainer a.btnReqLyricsTime').click(function(e) {
+		// 가사 신청 시 로그인 체크하기
+			alert("로그인 후, 신청하실 수 있습니다.");
+			return false;
+
+		requestLyrics(80089182, "T");
+		return false;
+	});
+
+	//일반 가사 등록(가사 없을 때)
+	$("div.lyricsContainer a.btnRegLyrics").click(function (e) {
+
+//		if(!this.player.isLogged) {
+//			this.player.showLoginLayer();
+//			return false;
+//		}
+
+		// 패널 아니면 팝업 띄움
+			this.showPanelInfoPopup();
+			return false;
+
+			openLyricsRegisterPage(80089182, "N");
+	});
+
+	window._paging_timer = setInterval(function(){
+		try{
+			if(bugs.paging) {
+				clearInterval(window._paging_timer);
+				LoadPagings();
+			}
+		}
+		catch(e){}
+	}, 100);
+
+	retrieveTrackPage(1,true);
+
+});
+
+
+
+function LoadPagings() {
+	var trackMvPager = new bugs.paging("trackMvList", 1, 4, 1, 1880, [4, 6]); 								// 뮤직 비디오 리스트 공통 페이징
+
+	var trackEsAlbumPager = new bugs.paging("trackEsAlbumList", 12, 3, 1, 1560, [3, 4]);	// 뮤직PD앨범 리스트 공통 페이징
+}
+
+requestLyrics = function(trackId, type) {
+
+	bugs.confirm("가사 신청을 하시겠습니까?", function() {
+		$.get(g_urlMusic + "/track/requestLyrics", {trackId : trackId, type : type}, function(ret) {
+			if(ret) {
+				alert("가사 신청이 완료되었습니다.");
+			}
+			else{
+				alert("신청되지 않았습니다.\n다시 시도해 주세요.");
+			}
+		}.bind(this));
+	});
+}
+
+openLyricsRegisterPage = function(trackId, type) {
+
+	var url ="";
+//	if(this.player.isPlayingTrack){
+//		this.player.playButtonHandler();
+//	}
+
+	if(type == "T"){
+		url = g_urlPanel+"/lyricsDtlReal?track_id="+trackId+"&proc_tp=REG";
+	}else{
+		url = g_urlPanel+"/lyricsDtl?track_id="+trackId+"&proc_tp=REG";
+	}
+	window.open(url,'name',
+		type == "T" ? 'width=852, height=652, toolbar=0, directories=0, status=0, menubar=0, scrollbars=0, resizable=0'
+					: 'width=512, height=672, toolbar=0, directories=0, status=0, menubar=0, scrollbars=0, resizable=0');
+}
+
+function disabledAddToTrack(){
+//	bugs.ui.showAlert("권리사의 요청으로 듣기가 불가하여<br />곡을 담을 수 없습니다.", {css : "layerLoginMsg"});
+//		return;
+	alert("권리사 요청으로 담을 수 없는 곡입니다.");
+}
+
+function popLayerLyricsReport() {
+	window.open(g_urlMusic + '/lyricsReport?track_id=80089182&refer=trackpage', 'popLyricsReport', 'width=516, height=589, toolbar=0, directories=0, status=0, menubar=0, scrollbars=0, resizable=0');
+}
+
+var retrieveTrackPage = function(page, isFirst){
+	var url = g_urlMusic+"/track/ajax/similarTrack";
+	$.ajax({
+		url : url,
+		data : {trackId : "80089182", "page": page, "decorator":"blank"},
+		type : "GET",
+		dataType : "html",
+		success : function(data){
+			if(bugs.valid.empty(data) || data.indexOf("innerContainer") < 0){
+				return;
+			}
+			var html = $(data);
+			if(html.has("div.innerContainer")){
+				$("#similarTrackArea").html(html).show();
+				if(typeof isFirst == "undefined"){
+					var pos = $("#similarTrackArea").offset().top;
+					var cHeight = $("#header").height();
+					$(window).scrollTop(pos-cHeight);
+				}
+			}
+
+		},
+		error : function(){
+		}
+	});
+
+};
+
+var toggleTrackDesc = function(){
+	if($("#trackDescArea").hasClass("fold")){
+		$("#trackDescArea").removeClass("fold").addClass("open");
+		$("#toggleTrackDescBtn").removeClass("fold open").addClass("open").find("em").text("접기");
+	}else{
+		$("#trackDescArea").removeClass("open").addClass("fold");
+		$("#toggleTrackDescBtn").removeClass("fold open").addClass("fold").find("em").text("펼치기");
+	}
+
+}
+
+</script>
+
+
+
+	
+
+	<meta property="og:locale" content="ko_KR" />
+
+	
+
+
+
+
+
+	<title>사랑했나봐/윤도현 - 벅스</title>
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<!-- 네이버 검색용 메타 -->
+	<meta name="naver-site-verification" content="0582453e44d4365f5e597d1580911be7a3173ef7"/>
+		
+<!-- bugs file packing [ bugs_wbugsAll_css ] cached data / start -->
+<link rel='stylesheet' type='text/css' href='//music.bugs.co.kr/filepacking/bugs_wbugsAll_css?env=svc&_t_s_=20220623-2139' />
+<!-- bugs file packing [ bugs_wbugsAll_css ] cached data / end -->
+
+
+	<link rel="shortcut icon" href="https://file.bugsm.co.kr/wbugs/common/faviconBugs.ico" type="image/x-icon" />
+	<link rel="icon" href="https://file.bugsm.co.kr/wbugs/common/faviconBugs.ico" type="image/x-icon" />
+
+
+<script src='/js/log/ace_counter.js'></script>
+
+	<script>
+	$(document).ready(function(){
+		$("[dotdotdot=Y]").dotdotdot({
+			watch : "window"
+		});
+	});
+	</script>
+
+    <meta name="last-process-time" content="2022-06-23 21:39:43">
+
+
+<span itemscope="" itemtype="http://schema.org/Organization">
+	 <link itemprop="url" href="https://music.bugs.co.kr">
+	 <a itemprop="sameAs" href="https://www.facebook.com/bugsplay"></a>
+	 <a itemprop="sameAs" href="http://blog.bugs.co.kr"></a>
+	 <a itemprop="sameAs" href="https://twitter.com/bugs_play"></a>
+	 <a itemprop="sameAs" href="https://itunes.apple.com/kr/app/bugs/id348555322?mt=8"></a>
+	 <a itemprop="sameAs" href="https://play.google.com/store/apps/details?id=com.neowiz.android.bugs"></a>
+</span>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+  try {
+    ga('create', 'UA-97174709-1', 'auto', 'billingTracker');
+  } catch (e) {
+    console.log('GoogleAnalytics Create Error');
+  }
+
+    var sendGoogleAnalyticsEventForBilling = function (category, action, label) {
+      try {
+        ga('billingTracker.send', 'event', category, action, label);
+      } catch (e) {
+        console.log('GoogleAnalytics Send Event Error');
+      }
+    }
+
+</script>
+</head>
+
+<body>
+
+	<div id="skipNav">
+		<a href="#container" onclick="$('#container').attr('tabIndex','-1');$('#container').focus();$('body,html').scrollTop(0);return false;"><span>본문 바로가기</span></a>
+		<a href="#gnb" onclick="bugs.navigator.setLeftMenuShow(true,true);$('#gnb').attr('tabIndex','-1');$('#gnb').focus();return false;"><span>메뉴 바로가기</span></a>
+		<a href="#loginHeader" onclick="$('#loginHeader a:first-of-type').attr('tabIndex','-1');$('#loginHeader a:first-of-type').focus();return false;"><span>로그인 바로가기</span></a>
+		<a href="#footer" onclick="$('#footer').attr('tabIndex','-1');$('#footer').focus();return false;"><span>하단 정보 바로가기</span></a>
+	</div>
+
+	<div id="wrap">
+
+<script>
+	$(document).ready(function(){
+					if('' == ""){
+				bugs.searchBoxAd.init();
+				bugs.searchBoxAd.checkInput();
+				bugs.searchBoxAd.inputBlur();
+				bugs.searchBoxAd.deleteText();
+			}
+		
+		popWebPlayerNotification();
+		
+		bugs.suggest.close();
+		var headerCommonBanner = '[{\"image_bg_color\":\"\",\"clickCount\":0,\"artist\":null,\"sub_category\":\"main\",\"crt_dt\":\"\",\"db_sts\":\"\",\"link\":\"https://music.bugs.co.kr/radio/musiccast/episode/26746\",\"view_target\":\"ALL\",\"title\":\"이주연의 영화 속 음악 145화\",\"str_content_id\":\"0\",\"content_type\":\"NONE\",\"crt_id\":\"\",\"track\":null,\"view_env\":\"SVC\",\"content_id2\":\"\",\"pay_yn\":\"\",\"banner_id\":99137,\"content_id\":0,\"album\":null,\"upd_dt\":\"\",\"mv\":null,\"weight\":20,\"image_path2\":\"\",\"artist_id\":\"0\",\"mobile_target\":\"\",\"target\":\"_self\",\"upd_id\":\"\",\"wiselog_code\":\"\",\"file_ext\":\"\",\"css_class_nm\":\"\",\"image_path\":\"//image.bugsm.co.kr/banner/images/original/137/99/0/99137.jpg\",\"view_start_date\":{\"date\":23,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":5,\"time\":1655953500000,\"day\":4},\"expire_day\":0,\"regdate\":{\"date\":23,\"hours\":10,\"seconds\":28,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":35,\"time\":1655948128000,\"day\":4},\"totalWeight\":0,\"app_nm\":\"\",\"album_id\":\"0\",\"lastupdate\":{\"date\":23,\"hours\":10,\"seconds\":28,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":35,\"time\":1655948128000,\"day\":4},\"view_end_date\":{\"date\":25,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1656126000000,\"day\":6},\"category\":\"WBUGS_HEADER_COMMON_BANNER\",\"status\":\"OK\"},{\"image_bg_color\":\"\",\"clickCount\":0,\"artist\":null,\"sub_category\":\"main\",\"crt_dt\":\"\",\"db_sts\":\"\",\"link\":\"https://music.bugs.co.kr/radio/musiccast/episode/26726\",\"view_target\":\"ALL\",\"title\":\"랄라스윗의 이중생활 279화\",\"str_content_id\":\"0\",\"content_type\":\"NONE\",\"crt_id\":\"\",\"track\":null,\"view_env\":\"SVC\",\"content_id2\":\"\",\"pay_yn\":\"\",\"banner_id\":99098,\"content_id\":0,\"album\":null,\"upd_dt\":\"\",\"mv\":null,\"weight\":20,\"image_path2\":\"\",\"artist_id\":\"0\",\"mobile_target\":\"\",\"target\":\"_self\",\"upd_id\":\"\",\"wiselog_code\":\"\",\"file_ext\":\"\",\"css_class_nm\":\"\",\"image_path\":\"//image.bugsm.co.kr/banner/images/original/98/99/0/99098.jpg\",\"view_start_date\":{\"date\":22,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1655866800000,\"day\":3},\"expire_day\":0,\"regdate\":{\"date\":22,\"hours\":10,\"seconds\":13,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":54,\"time\":1655862853000,\"day\":3},\"totalWeight\":0,\"app_nm\":\"\",\"album_id\":\"0\",\"lastupdate\":{\"date\":22,\"hours\":10,\"seconds\":13,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":54,\"time\":1655862853000,\"day\":3},\"view_end_date\":{\"date\":24,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1656039600000,\"day\":5},\"category\":\"WBUGS_HEADER_COMMON_BANNER\",\"status\":\"OK\"}]||[{\"image_bg_color\":\"\",\"clickCount\":0,\"artist\":null,\"sub_category\":\"sub\",\"crt_dt\":\"\",\"db_sts\":\"\",\"link\":\"https://music.bugs.co.kr/radio/musiccast/episode/26746\",\"view_target\":\"ALL\",\"title\":\"이주연의 영화 속 음악 145화\",\"str_content_id\":\"0\",\"content_type\":\"NONE\",\"crt_id\":\"\",\"track\":null,\"view_env\":\"SVC\",\"content_id2\":\"\",\"pay_yn\":\"\",\"banner_id\":99138,\"content_id\":0,\"album\":null,\"upd_dt\":\"\",\"mv\":null,\"weight\":20,\"image_path2\":\"\",\"artist_id\":\"0\",\"mobile_target\":\"\",\"target\":\"_self\",\"upd_id\":\"\",\"wiselog_code\":\"\",\"file_ext\":\"\",\"css_class_nm\":\"\",\"image_path\":\"//image.bugsm.co.kr/banner/images/original/138/99/0/99138.jpg\",\"view_start_date\":{\"date\":23,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":5,\"time\":1655953500000,\"day\":4},\"expire_day\":0,\"regdate\":{\"date\":23,\"hours\":10,\"seconds\":4,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":36,\"time\":1655948164000,\"day\":4},\"totalWeight\":0,\"app_nm\":\"\",\"album_id\":\"0\",\"lastupdate\":{\"date\":23,\"hours\":10,\"seconds\":4,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":36,\"time\":1655948164000,\"day\":4},\"view_end_date\":{\"date\":25,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1656126000000,\"day\":6},\"category\":\"WBUGS_HEADER_COMMON_BANNER\",\"status\":\"OK\"},{\"image_bg_color\":\"\",\"clickCount\":0,\"artist\":null,\"sub_category\":\"sub\",\"crt_dt\":\"\",\"db_sts\":\"\",\"link\":\"https://music.bugs.co.kr/radio/musiccast/episode/26726\",\"view_target\":\"ALL\",\"title\":\"랄라스윗의 이중생활 279화\",\"str_content_id\":\"0\",\"content_type\":\"NONE\",\"crt_id\":\"\",\"track\":null,\"view_env\":\"SVC\",\"content_id2\":\"\",\"pay_yn\":\"\",\"banner_id\":99099,\"content_id\":0,\"album\":null,\"upd_dt\":\"\",\"mv\":null,\"weight\":20,\"image_path2\":\"\",\"artist_id\":\"0\",\"mobile_target\":\"\",\"target\":\"_self\",\"upd_id\":\"\",\"wiselog_code\":\"\",\"file_ext\":\"\",\"css_class_nm\":\"\",\"image_path\":\"//image.bugsm.co.kr/banner/images/original/99/99/0/99099.jpg\",\"view_start_date\":{\"date\":22,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1655866800000,\"day\":3},\"expire_day\":0,\"regdate\":{\"date\":22,\"hours\":10,\"seconds\":40,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":54,\"time\":1655862880000,\"day\":3},\"totalWeight\":0,\"app_nm\":\"\",\"album_id\":\"0\",\"lastupdate\":{\"date\":22,\"hours\":10,\"seconds\":40,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":54,\"time\":1655862880000,\"day\":3},\"view_end_date\":{\"date\":24,\"hours\":12,\"seconds\":0,\"month\":5,\"timezoneOffset\":-540,\"year\":122,\"minutes\":0,\"time\":1656039600000,\"day\":5},\"category\":\"WBUGS_HEADER_COMMON_BANNER\",\"status\":\"OK\"}]';
+		
+		if(headerCommonBanner != ""){
+			window._headerCommonBannerMainList = bugs.utils.parseJson(headerCommonBanner.split("||")[0]);
+			window._headerCommonBannerSubList = bugs.utils.parseJson(headerCommonBanner.split("||")[1]);
+		}
+		
+		headerCommonBannerLoad(location.href);
+		
+		if(bugs.cookie.get("hasCouponEmailID") == "1"){
+			$("#no_coupon_text").append('<a href="http://help.bugs.co.kr/sub?target=bugs/faq/list%3FfaqId%3D26048%26categoryNo%3D4600" class="linkFAQ" target="_blank">구매한 이용권이 보이지 않는다면?</a>');
+		}
+	});
+	
+	function popWebPlayerNotification() {
+		var flag = Cookies.get("wpn");
+		if(!flag)
+			$(".slogan .tip").show();
+		else
+			$(".slogan .tip").hide();
+	};
+	
+	function closeWebPlayerNotification() {
+		Cookies.set("wpn", "Y", {expires:365*50, path:"/", domain:document.domain});
+		$(".slogan .tip").hide();
+	}
+	
+	function headerCommonBannerLoad(url){
+// 		url = window.location.href; //테스트용
+		
+		if(url.indexOf("?") > 0){
+			url = url.substring(0,url.indexOf("?"))
+		}
+
+		if(url == g_urlWww || url == g_urlWww+"/" || url == g_urlWww+"/index" || url == g_urlMusic){ //main
+			if(typeof window._headerCommonBannerSubList != "undefined" && window._headerCommonBannerMainList.length > 0){
+				var selectedBanner = bugs.utils.getBannerRandomExtractByWeight(window._headerCommonBannerMainList);
+				$('#header div.header div.banner').empty();
+				$('#header div.header div.banner').append('<a href="'+ bugs.common_util.setLinkUrlWiseLog(selectedBanner.link, "M_header_03_03") +'" target="'+selectedBanner.target+'" onclick="bugs.logging.banner('+selectedBanner.banner_id+','+"'banner'"+')" title="'+selectedBanner.title+'-페이지 이동">'+
+						'<img src="'+selectedBanner.image_path+'" alt="'+selectedBanner.title+'"></a>');
+			}
+		
+		}else{ //sub
+			if(typeof window._headerCommonBannerSubList != "undefined" && window._headerCommonBannerSubList.length > 0){
+				var selectedBanner = bugs.utils.getBannerRandomExtractByWeight(window._headerCommonBannerSubList);
+				$('#header div.header div.banner').empty();
+				$('#header div.header div.banner').append('<a href="'+selectedBanner.link+'" target="'+selectedBanner.target+'" onclick="bugs.logging.banner('+selectedBanner.banner_id+','+"'banner'"+')" title="'+selectedBanner.title+'-페이지 이동">'+
+						'<img src="'+selectedBanner.image_path+'" alt="'+selectedBanner.title+'"></a>');
+			}
+		}
+
+	};
+	
+</script>
+<header id="header">
+<!--[if lte IE 8]>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#wrap').addClass('commonHeaderIEBrowser');
+	});
+</script>
+
+<div class="IEBrowserUnavailable">
+	<strong>최신 웹브라우저로 업그레이드 하고 음악을 즐기세요!</strong><br>
+	Microsoft에서 구형 Internet Explorer에 대한 지원을 공식 중단했습니다. 안정적인 서비스 이용을 위해 브라우저를 최신 버전으로 업데이트해 주세요. <a href="https://help.bugs.co.kr/sub?target=bugs/faq/list%3FfaqId%3D31944%26categoryNo%3D4622">자세한 안내 보기 &gt;</a>
+</div>
+
+<![endif]-->
+
+
+
+
+<aside class="layer layerSettingPlayer guide title" style="display:none;">
+	<div class="box-shadow"></div>
+
+	<header class="layer-title">
+		<h1>안내</h1>
+	</header>
+
+	<section class="layerContents">
+		<p class="message">
+			음악을 재생할 플레이어를 선택해 주세요. <br/>
+			벅스 웹상단 &gt; <strong>플레이어 선택</strong>에서 플레이어를 변경할 수 있습니다.
+		</p>
+		
+		<fieldset>
+			<div class="radioChk"><input type="radio" id="radio_player_web2" name="radio_player_type2" value="WEB" checked="checked"> <label for="radio_player_web2">웹 플레이어</label></div>
+			<div class="radioChk"><input type="radio" id="radio_player_mac2" name="radio_player_type2" value="MAC"> <label for="radio_player_mac2">벅스 플레이어 (프로그램 설치 필요)</label>
+				<p>
+					v 1.3.0 미만인 경우,  최신 버전으로 업데이트 해주세요.<br/>
+					<a href="https://music.bugs.co.kr/serviceGuide/pc/bugsPlayer?sub=macPlayer" target="_blank">[설치 안내 바로가기]</a>
+				</p>
+			</div>
+		</fieldset>
+		
+		<p class="agreeCheck">
+			<input type="checkbox" id="setPlayerSelectionConfirm" name="setPlayer"> <label for="setPlayerSelectionConfirm">항상 선택한 플레이어로 재생</label>
+		</p>
+
+		<p class="btns">	
+			<button class="btnNormal" type="ok">확인</button>
+		</p>
+	</section>
+	
+	<button class="btnClose" type="cancel">닫기</button>
+</aside>
+<!-- //플레이어 선택 설정 안내 -->
+
+<aside class="layer layerSettingPlayer selectPlayer title" style="display:none;">
+	<div class="box-shadow"></div>
+
+	<header class="layer-title">
+		<h1>플레이어 선택</h1>
+	</header>
+
+	<section class="layerContents">
+		<p class="message">음악을 재생할 플레이어를 선택해 주세요.</p>
+		
+		<fieldset>
+			<div class="radioChk"><input type="radio" id="radio_player_web1" name="radio_player_type1" value="WEB" checked="checked"> <label for="radio_player_web1">웹 플레이어</label></div>
+			<div class="radioChk"><input type="radio" id="radio_player_mac1" name="radio_player_type1" value="MAC"> <label for="radio_player_mac1">벅스 플레이어 (프로그램 설치 필요)</label>
+				<p>
+					v 1.3.0 미만인 경우,  최신 버전으로 업데이트 해주세요.<br/>
+					<a href="https://music.bugs.co.kr/serviceGuide/pc/bugsPlayer?sub=macPlayer" target="_blank">[설치 안내 바로가기]</a>
+				</p>
+			</div>
+		</fieldset>
+
+		<p class="btns">	
+			<button class="btnNormal" type="ok">확인</button>
+		</p>
+	</section>
+	
+	<button class="btnClose" type="cancel">닫기</button>
+</aside>
+<!-- //플레이어 선택 안내 -->
+
+
+<!--
+<aside class="layer layerPlayingPlayer" style="display:none;">
+	<div class="box-shadow"></div>
+
+	<section class="layerContents">
+		<strong class="message">벅스 플레이어로 재생됩니다.</strong>
+		<ul>
+			<li>벅스 웹상단 &gt; 플레이어 선택에서 플레이어를 변경할 수 있습니다.</li>
+			<li>혹시 벅스 플레이어가 실행되지 않는다면? <a href="https://music.bugs.co.kr/serviceGuide/pc/bugsPlayer?sub=macPlayer" onclick="$('.layerPlayingPlayer').hide();" target="_blank">[설치 안내 바로가기]</a></li>
+		</ul>
+	</section>
+</aside>
+-->
+<script type="text/javascript">
+//	var ua = navigator.userAgent;
+//	window._isMacBrowser = navigator.userAgent.search("Mac") > -1;
+//	window._isMacPlayerLinked = /Mac OS X 11_/.test(ua)
+//				|| /Mac OS X 12_/.test(ua)
+//				|| (/Mac OS X 10_/.test(ua) && !/Mac OS X 10_10/.test(ua) && !/Mac OS X 10_9/.test(ua) && !/Mac OS X 10_8/.test(ua) && !/Mac OS X 10_7/.test(ua) && !/Mac OS X 10_6/.test(ua) && !/Mac OS X 10_5/.test(ua)
+//														&& !/Mac OS X 10_4/.test(ua) && !/Mac OS X 10_3/.test(ua) && !/Mac OS X 10_2/.test(ua));
+
+	var goServiceGuidePlayerPage = function(){
+		if(navigator.platform.indexOf('Win') > -1){
+			document.location.href = "https://music.bugs.co.kr/serviceGuide/pc/bugsPlayer";
+		}else{
+			document.location.href = "https://music.bugs.co.kr/serviceGuide/pc/bugsPlayer?sub=macPlayer";
+		}
+	}
+
+	$(document).ready(function() {
+		showMacPlayerSelection();
+	});
+
+	var showMacPlayerSelection = function() {
+		if(bugs.music.isMacPlayerSupport()) {
+			$(".slogan .selectPlayer").show();
+			$(".slogan .bugsPlayer").hide();
+
+			var dp = bugs.cookie.get('defaultPlayer') || "";
+
+			updateHeaderPlayerMenu(dp);
+		} else {
+			$(".slogan .selectPlayer").hide();
+			$(".slogan .bugsPlayer").show();
+		}
+	}
+
+	var updateHeaderPlayerMenu = function(type) {
+		$("#headerWebPlayer").hide();
+		$("#headerMacPlayer").hide();
+
+		if(type == "MAC") {
+			$("#headerMacPlayer").show();
+		} else { // if(type == "" || type == "WEB") {
+			$("#headerWebPlayer").show();
+			$("#headerWebPlayer").removeAttr("onclick");
+			$("#headerWebPlayer").unbind("click").bind("click", function() {
+				bugs.music.popWebPlayer();
+				bugs.wiselog.area('M_header_02_20');
+				return false;
+			});
+		}
+	}
+</script>
+
+<div class="top">
+	<div class="slogan">
+		<a href="https://music.bugs.co.kr/event/promotion/supersound/index?wl_ref=M_header_02_01" class="supersound" target="_blank">슈퍼사운드 벅스</a>
+		<a id="headerWebPlayer" href="javascript:;" onclick="javascript:bugs.music.popWebPlayer();bugs.wiselog.area('M_header_02_13');return false;" class="openPlayer" aria-label="새창">웹 플레이어</a>
+		<a id="headerMacPlayer" href="bugs3://app/wakeup" onclick="bugs.wiselog.area('M_header_02_18');" class="openPlayer" style="display:none;">벅스 플레이어</a>
+		<span class="bugsPlayer" style="display:none;">
+			<a href="javascript:;" onclick="try{bugs.wiselog.area('M_header_02_14');}catch(e){} goServiceGuidePlayerPage();">벅스 플레이어</a>
+		</span>
+		<a href="javascript:;" onclick="bugs.ui.showPlayerSettingLayer();bugs.wiselog.area('M_header_02_19');" class="selectPlayer" aria-label="새창" style="display:none;">플레이어 선택</a>
+	</div>
+
+	<div class="rightGroup">
+		<div class="more">
+			<a href="http://help.bugs.co.kr" onclick="try{bugs.wiselog.area('M_header_02_06');}catch(e){}">고객센터</a>
+			<a href="javascript:;" onclick="try{bugs.wiselog.area('M_header_02_08');}catch(e){}bugs.ui.cp.headerGameMenuToggle();" class="game">게임</a>
+
+			<aside class="layer gameMenu">
+				<div class="box-shadow"></div>
+				<ul class="list-layer-select">
+					<li><a href="http://www.hangame.com/" onclick="try{bugs.wiselog.area('M_header_02_09');}catch(e){}" target="_blank">한게임</a></li>
+					<li><a href="https://game.bugs.co.kr?wl_ref=sub_gnb&wl_ref=M_header_02_11" onclick="try{bugs.wiselog.area('M_header_02_11');}catch(e){}" target='_blank'>피망</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<div class="family">
+			<a href="https://www.comico.kr" onclick="try{bugs.wiselog.area('M_header_02_03');}catch(e){}" class="comico" target="_blank">comico</a>
+			<a href="http://www.ticketlink.co.kr" onclick="try{bugs.wiselog.area('M_header_02_04');}catch(e){}" class="ticketlink" target="_blank">티켓링크</a>
+			<a href="https://www.hangame.com" onclick="try{bugs.wiselog.area('M_header_02_05');}catch(e){}" class="hangame" target="_blank">HANGAME</a>
+		</div>
+	</div>
+</div>
+
+	
+	<div class="header">
+		<a href="https://music.bugs.co.kr?wl_ref=M_header_03_01" class="logo seasonal hyrend">Bugs!<span class="blind">-홈으로 이동</span></a>
+		
+		<div class="innerContainer">
+			<input type="hidden" id="_hsi"/>
+			<fieldset class="searchForm" id="hederSearchForm">
+				<div class="input">
+					<input type="text" id="headerSearchInput" title="검색어 입력" autocomplete="off" /><span class="adKeywordDelete" id="keywordClearButton"><span class="blind">검색어 삭제</span></span><button class="btnSearch" id="hederSearchFormButton" onclick="bugs.search.searchFromButton();">검색<span class="blind">-페이지 이동</span></button>
+				</div>
+				<div id="suggest" style="display:none;">
+					<div class="box-shadow"></div>
+				</div>
+			</fieldset>
+			
+			<div class="banner"></div>
+		</div>
+		
+
+<div class="rightSection">
+
+	
+
+	<div class="member">
+
+		<div id="loginHeader" class="login">
+			<!-- <a href="javascript:bugs.ui.showLoginLayerForHeader();" onclick="javascript:bugs.wiselog.area('M_header_03_05');">로그인</a>
+			<a href="https://secure.bugs.co.kr/member/join/memberMain?wl_ref=M_header_03_06" class="signup"><span class="bar"></span> 회원가입<span class="blind">-페이지 이동</span></a> -->
+			<a href="javascript:void(0);" onclick="bugs.wiselog.area('M_header_03_05');bugs.ui.showLoginLayerForHeader({caller:this});">로그인 / 회원가입</a>
+		</div>
+
+		<div class="notification" id="memberNotificationArea">
+			<button id="btnNotificationMain" onclick="bugs.notice.pop(this, g_isLogged);bugs.wiselog.area('M_header_03_04');" style="display:none;">알림</button>
+			<button id="aNotificationMain" class="count" onclick="bugs.notice.pop(this, g_isLogged);bugs.wiselog.area('M_header_03_04');" style="display:none;"><span class="blind">새로운</span><span>알림</span>0<span class="blind">개</span></button>
+		</div>
+	</div>
+</div>
+
+	</div>
+</header><script type="text/javascript">
+	$(window).load(function(){
+		if(g_isLogged){
+			bugs.music.myAlbumList.gnbListArea = $("#gnbMyalbumListArea");
+			bugs.music.myAlbumList.moreView = $("#btnMyalbumMoreView");
+			bugs.music.myAlbumList.getGnbMyAlbumList(1);
+		}
+		if(g_isGuest){
+			$ban = $('.link.ticket, .link.coupon');
+			$ban.attr("href", "javascript:alert('한게임 Plus 회원은 이용할 수 없는 기능입니다.');")
+		}
+	});
+</script>
+<div id="gnb">
+	<span id="gnbHandleBtn" class="btnMenuFolding" style="display:none">MENU</span>
+
+	<div id="gnbBody">
+		<div class="links">
+			<div class="inner">
+				<a href="https://music.bugs.co.kr/member/vipinfo?wl_ref=M_header_02_12" class="btnNormal lounge">벅스 VIP 멤버십 안내</a>
+				<a href="https://music.bugs.co.kr/pay/recommend?wl_ref=M_left_01_01" class="link ticket">이용권 구매</a>
+				<a href="https://music.bugs.co.kr/pay/offlineCoupon?wl_ref=M_left_01_01" class="link coupon">상품권 등록</a>
+			</div>
+		</div>
+
+		<nav>
+			<ul>
+				<li class="chart"><a href="https://music.bugs.co.kr/chart?wl_ref=M_left_02_01" class="hyrend" lmid="lm_chart">벅스차트</a></li>
+				<li class="news"><a href="https://music.bugs.co.kr/newest?wl_ref=M_left_02_03" class="hyrend" lmid="lm_news">최신 음악</a></li>
+				<li class="music4u"><a href="https://music.bugs.co.kr/music4u?wl_ref=M_left_02_02" class="hyrend" lmid="lm_m4u" loginRequired="PAGE">뮤직4U</a></li>
+				<li class="genre"><a href="https://music.bugs.co.kr/genre/home?wl_ref=M_left_02_06" class="hyrend" lmid="lm_genre">장르</a></li>
+				<li class="special"><a href="https://music.bugs.co.kr/musicpost?wl_ref=M_left_02_08" class="hyrend" lmid="lm_special">뮤직포스트</a></li>
+				<li class="theme open" folder="2">
+					<strong>테마</strong><span class="bu"></span>
+					<ul>
+						<li><a href="https://music.bugs.co.kr/musicpd?wl_ref=M_left_02_04" class="hyrend" lmid="lm_esalbum">뮤직PD 앨범</a></li>
+						<li><a href="https://music.bugs.co.kr/recomreview?wl_ref=M_left_02_05" class="hyrend" lmid="lm_recomreview">추천앨범 리뷰</a></li>
+						<li><a href="https://music.bugs.co.kr/years?wl_ref=M_left_02_07" class="hyrend" lmid="lm_years">연도별</a></li>
+					</ul>
+				</li>
+				<li class="connect"><a href="https://music.bugs.co.kr/connect?wl_ref=M_left_02_13" class="hyrend" lmid="lm_connect">커넥트<span class="iconNew">NEW</span></a></li>
+				<li class="radio"><a href="https://music.bugs.co.kr/radio?wl_ref=M_left_02_10" class="hyrend" lmid="lm_radio">라디오</a></li>
+				<li class="bugsonTV open" folder="5">
+					<strong>벅스TV</strong><span class="bu"></span>
+					<ul>
+						<li class="specialLive"><a href="https://music.bugs.co.kr/musicpost/list/bugstv?wl_ref=M_left_04_04">스페셜 라이브</a></li>
+					</ul>
+				</li>
+				<li class="mymusic open" folder="3">
+					<strong>내 음악</strong><span class="bu"></span>
+					<ul>
+						<li><a href="https://music.bugs.co.kr/user/library/listen?wl_ref=M_left_03_05" class="hyrend" lmid="lm_recentTrack" loginRequired="PAGE">최근 들은 곡</a> <button onclick="bugs.music.myAlbumList.listenListenedList('',true);" aria-label="새창">최근 들은 곡 재생</button></li>
+						<li><a href="https://music.bugs.co.kr/user/library/listen?sort=LISTEN_COUNT&wl_ref=M_left_03_06" class="hyrend" lmid="lm_manytimesTrack" loginRequired="PAGE">가장 많이 들은 곡</a> <button onclick="bugs.music.myAlbumList.listenListenedList('LISTEN_COUNT',true);" aria-label="새창">가장 많이 들은 곡 재생</button></li>
+						<li><a href="https://music.bugs.co.kr/user/library/purchased/track?wl_ref=M_left_03_01" class="hyrend" lmid="lm_buymusic" loginRequired="PAGE">구매한 음악</a></li>
+						<li><a href="https://music.bugs.co.kr/user/library/like/track?wl_ref=M_left_03_02" class="hyrend" lmid="lm_likemusic" loginRequired="PAGE">좋아한 음악</a></li>
+					</ul>
+					<div class="myalbum">
+						<strong>내 앨범</strong>
+						<a href="https://music.bugs.co.kr/user/library/myalbum/list?wl_ref=M_left_03_07" class="edit hyrend" loginRequired="PAGE" lmid="lm_myAlbumManage">전체보기</a>
+						<div class="btnNewAlbum"><a href="javascript:;" onclick="playlists.make2('GNB');bugs.wiselog.area('M_left_03_04');"><span class="blind">내앨범</span>+&nbsp;&nbsp;새로 만들기</a></div>
+						<ul id="gnbMyalbumListArea">
+						</ul>
+						<div><a href="javascript:;" id="btnMyalbumMoreView" onclick="bugs.music.myAlbumList.getNext(); bugs.wiselog.area('M_left_03_08');" class="btnMoreAlbum" style="display:none;">더보기</a></div>
+
+						<div class="loadingFailed" id="gnbMyalbumLoadFail" style="display:none;">
+							<p>내 앨범을 불러오지<br />못했습니다.</p>
+							<button onclick="bugs.music.myAlbumList.getGnbMyAlbumList(1, 'failReload');">내 앨범 불러오기</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<script>
+try{
+	bugs.navigator.setLeftMenuFolder();
+}
+catch(e){}
+</script>
+		<div id="hyrendContentBody"  >
+		
+
+
+
+<article id="container" class="mnMusic mnTrack pgTrack">
+
+	<header class="sectionPadding pgTitle noneLNB">
+		<div class="innerContainer">
+			<h1>
+				사랑했나봐
+			</h1>
+			<div class="btns">
+			</div>
+		</div>
+	</header>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        if(g_isGuest){
+            $("section.summaryTrack a[name=downloadBtn]").attr("onclick", "alert('한게임 Plus 회원은 이용할 수 없는 기능입니다.');");
+        }
+    });
+
+	var openPageLayer = function(albumId, id, caller) {
+		var layer = new bugs.music.photoLayer(
+			g_urlMusic + "/album/ajax/photoes",
+			{albumId : albumId, id : id, page : 1, row : 8}, null, caller
+		);
+		layer.open();
+	};
+
+	var openSpectrogramLayer = function(caller){
+		var source = JSON.parse("");
+		if(source.length == 0) return;
+		var spectrogramLayer = new bugs.music.photoLayer(
+			null,{source : source, page:1, row:8}, "TRACK_SPECTROGRAM", caller
+		);
+		bugs.wiselog.area("S_tr_01_19");
+
+		spectrogramLayer.open();
+	};
+
+	function addLikeTrack(obj) {
+		bugs.music.addLikeTrack('80089182', {
+			anchor : $(obj)
+		});
+	}
+
+	function delLikeTrack(obj) {
+		bugs.music.delLikeTrack('80089182', {
+			anchor : $(obj)
+		});
+	}
+
+    function onClick_likeBtn(obj){
+		bugs.wiselog.area('S_tr_01_11');
+        var params = {};
+        params.ui_type = bugs.recommend.UiType.ONE;
+        params.content_type = bugs.api.like.ContentType.TRACK;
+        params.content_id = 80089182;
+        params.eventTarget = obj;
+        params.artist_yn = "Y";
+        params.showRecommendLayer = true;
+        params.apiError = function(data){
+            if(data.ret_code ==  bugs.api.RETURN_CODE.NOT_LOGGED.code){
+                bugs.ui.showLoginLayer();
+            }
+        }
+
+        bugs.like.toggle(params);
+    }
+
+</script>
+
+	<!-- 기본정보 -->
+	<section class="sectionPadding summaryInfo summaryTrack">
+		<div class="innerContainer">
+			<h1>곡 기본정보</h1>
+
+			<div class="basicInfo">
+				<div class="photos">
+					<ul>
+									<li class="big">
+									<a href="https://music.bugs.co.kr/album/8007941?wl_ref=S_tr_01_01">
+										<span class="mask"></span>
+										<img src="https://image.bugsm.co.kr/album/images/200/80079/8007941.jpg?version=20211215010932.0" alt="Difference 사진" onerror="bugs.utils.imgError(this);" />
+									</a>
+					</ul>
+				</div>
+
+				<table class="info" style="position: relative;">
+					<caption>곡 정보</caption>
+					<tbody>
+						<tr>
+							<th scope="row">아티스트</th>
+							<td>
+										<a	href="https://music.bugs.co.kr/artist/280?wl_ref=S_tr_01_02">
+											윤도현
+										</a>
+							</td>
+						</tr>
+							<tr>
+								<th scope="row">앨범</th>
+								<td><a href="https://music.bugs.co.kr/album/8007941?wl_ref=S_tr_01_04">Difference</a></td>
+							</tr>
+
+						<tr>
+							<th scope="row">재생 시간</th>
+							<td><time datetime="03:58">03:58</time></td>
+						</tr>
+
+						<tr>
+							<th scope="row">고음질</th>
+							<td>FLAC 16bit</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+				<p class="btns">
+							<a href="javascript:;" onclick="bugs.wiselog.area('S_tr_01_05');bugs.music.listen('80089182',true);" class="btnNormal">듣기</a>
+							<a href="javascript:;" onclick="bugs.wiselog.area('S_tr_01_06');bugs.music.listen('80089182');" class="btnNormal">재생목록에 추가</a>
+
+						<a href="javascript:void(0);" class="btnNormal" onClick="bugs.wiselog.area('S_tr_01_07');bugs.music.addTrackToMyAlbum(this,80089182);">내 앨범에 담기</a>
+
+							<a href="javascript:;" name="downloadBtn" class="btnNormal" onclick="bugs.wiselog.area('S_tr_01_08');bugs.layermenu.down(this, '80089182','true','true','44.1','false','' );" title="다운로드">다운로드</a>
+							<a href="javascript:;" class="btnNormal" onclick="bugs.wiselog.area('S_tr_01_09');bugs.music.listenRadioFromSeed('80089182','track');">라디오 듣기</a>
+
+				</p>
+			</div>
+
+			<div class="etcInfo">
+				<span class="likeBtn likeTrack">
+                    <a href="javascript:;" onclick="onClick_likeBtn(this)" class="btnNormal like "><span>좋아 <em>62,498</em></span></a>
+                    <span id="recommend_layer_area"></span>
+				</span>
+
+<script type="text/javascript">
+	function goBottomCommentArea(){
+		var pos = $("#comments:not(.commentsBside)").offset().top;
+		var cHeight = $("#header").height();
+		$(window).scrollTop(pos-cHeight);
+		
+	}
+</script>
+<div class="comment">
+	<h3>한마디</h3>
+	
+
+
+	
+	
+	
+	<p class="total"><span><a href="javascript:;" onclick="bugs.wiselog.area('S_tr_01_13'); goBottomCommentArea();" id="basicInfoTotalCount"><span cmt_disp_comment_count="onlyone">0</span>개</a>
+		
+		</span><a href="javascript:;" onclick="bugs.wiselog.area('S_tr_01_12'); goBottomCommentArea();" class="btnNormal">쓰기</a></p>
+	
+	
+	<div class="preview" id="basicInfoCommentPrev">
+	</div>
+	
+	<div class="preview nodata" id="basicInfoCommentPrevNone" style="display:none;">
+	</div>
+	
+</div>
+
+<div class="share">
+	<h3>공유</h3>
+	<p>
+
+
+		<a href="javascript:commonSnsShare('FACEBOOK')" onclick="bugs.wiselog.area('S_tr_01_10');" class="facebook" aria-label="새창">페이스북 공유하기</a>
+		<a href="javascript:commonSnsShare('KAKAOSTORY')" onclick="bugs.wiselog.area('S_tr_01_10');" class="kakaostory" aria-label="새창">카카오스토리 공유하기</a>
+		<a href="javascript:;" onclick="bugs.layermenu.openShareUrlLayer('TRACK',this,'80089182', event);" class="link" aria-label="새창">링크 공유하기</a>
+
+
+
+	</p>
+</div>
+
+<script>
+function commonSnsShare(snsType){
+	if(snsType == "FACEBOOK"){
+		bugs.sns.facebook(bugsSnsParam);
+	}
+	else if(snsType == "TWITTER"){
+		bugs.sns.twitter(bugsSnsParam);
+	}
+	else if(snsType == "KAKAOSTORY"){
+		bugs.sns.kakaostory(bugsSnsParam);
+	}
+}
+</script>
+
+<!-- 앨범정보. 뮤직피디 앨범정보 -->
+
+			</div>
+			<!-- //기타정보 -->
+
+		</div>
+	</section>
+
+
+
+
+	<!-- 가사 -->
+	<section class="sectionPadding contents lyrics">
+		<div class="innerContainer">
+			<header class="sectionTitle">
+				<h1>가사</h1>
+			</header>
+
+
+			<!-- 가사 있을 경우 -->
+						<div class="lyricsContainer">
+						<p><xmp>이별은 만남보다 참 쉬운건가봐
+차갑기만한 사람
+내 맘 다 가져간걸 왜 알지 못하나
+보고싶은 그 사람
+사랑했나봐 잊을수 없나봐
+자꾸 생각나 견딜수가 없어
+후회하나봐 널 기다리나봐
+또 나도 몰래 가슴 설레여와
+저기 널 닮은 뒷모습에
+기억은 계절따라 흩어져 가겠지
+차갑기만한 사람
+빈 가슴 애태우며 난 기다리겠지
+어설픈 내 사랑은
+사랑했나봐 잊을수 없나봐
+자꾸 생각나 견딜수가 없어
+후회하나봐 널 기다리나봐
+또 나도 몰래 가슴 설레여와
+저기 널 닮은 뒷모습에
+기억은 계절따라 흩어져 가겠지
+차갑기만한 사람
+빈 가슴 애태우며 난 기다리겠지
+어설픈 내 사랑은
+못되게 눈돌리며 외면한
+니 모습 모른척 할래
+한번쯤은 날 뒤돌아보며
+아파했다 믿을래
+바보인가봐 한마디 못하는
+잘 지내냐는 그 쉬운 인사도
+행복한가봐 여전한 미소는
+자꾸만 날 작아지게 만들어
+멀어지는 니 모습처럼
+언젠가 다른 사람 만나게 되겠지
+널 닮은 미소 짓는
+하지만 그 사람은 니가 아니라서
+왠지 슬플것 같아 잊을 수 없는 사람</xmp></p>
+						<div class="reference">
+							<cite class="writer">야리</cite> 님이 등록해 주신 가사입니다.
+						</div>
+							<a href="javascript:;"	class="btnNormal btnLyricsReport" onclick="bugs.ui.showLoginLayer();">가사 오류 제보</a>
+						</div>
+		</div>
+	</section>
+
+	<!-- 이 곡의 영상 -->
+	<section class="sectionPadding contents trackMvList bgGray">
+		<div class="innerContainer">
+			<header class="sectionTitle">
+				<h1>이 곡의 영상</h1>
+			</header>
+
+<ul class="list tileView mvList ">
+<li class="divider ">
+<figure class="mvInfo" trackId="80089182" albumId="8007941" mvId="21994" multiArtist="N" >
+<a href="javascript:;" class="thumbnail" onclick="bugs.wiselog.area('list_mv_01_tr');bugs.music.viewMV(21994,true); " title="사랑했나봐 영상 보기">
+<span class="mask"></span>
+<img src="https://image.bugsm.co.kr/mvhd/images/224/219/21994.jpg?version=20211215010932.0" onerror="bugs.utils.imgError(this);" alt="사랑했나봐 영상 대표이미지" />
+<time datetime="" class="duration">03:15</time>
+</a>
+<figcaption class="info">
+<p class="trackTitle">
+<span class="badge all">[전체 관람가]</span> <a href="javascript:;" onclick="bugs.wiselog.area('list_mv_02_tr');bugs.music.viewMV(21994); " title="사랑했나봐 영상 보기" >사랑했나봐</a>
+</p>
+<div class="subInfo">
+<p class="artist">
+<a href="https://music.bugs.co.kr/artist/280?wl_ref=list_mv_03_tr" title="윤도현" >윤도현</a>
+</p>
+<p>
+<time datetime="">2005.04.29</time>
+<span class="albumType">메이킹</span>
+</p>
+</div>
+<a href="javascript:;" class="btnActions"
+onclick="bugs.wiselog.area('list_mv_04_tr');
+bugs.layermenu.mvMoreAction(this,'21994','80089182','', '8007941','RL','NONE','STR','PASS','N', 'N','OK', '_tr','OK');"
+artist_id="280"
+artist_disp_nm="윤도현"
+mv_title="사랑했나봐"
+layerPositionTarget="figure"
+>기타 기능</a>
+</figcaption>
+</figure>
+</li> </ul>
+			<div class="paging">
+				<a href="javascript:;" class="btnPrev icon">이전</a>
+				<span class="btnPrev icon">이전</span>
+				<a href="javascript:;" class="btnNext icon">다음</a>
+				<span class="btnNext icon">다음</span>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- 이 곡이 담긴 뮤직PD 앨범 -->
+	<section class="sectionPadding contents trackEsAlbumList bgGray">
+		<div class="innerContainer">
+			<header class="sectionTitle">
+				<h1>이 곡이 담긴 뮤직PD 앨범</h1>
+			</header>
+
+
+<!-- 앨범 목록 -->
+<ul class="list tileView musicPDAlbumList lineBreakArea ">
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #f1ece6;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/52761?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/527/52761.jpg" alt="찌더움 없는 여름 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/527/52761.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/9544/954400.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/5931/593151.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(52761,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/52761?wl_ref=list_mab_03_tr" class="title hyrend" title="찌더움 없는 여름" target="_self">찌더움 없는 여름</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4340?wl_ref=list_mab_04_tr" class="mPD hyrend" title="낭니" target="_self">낭니</a>
+<time date="">2022.06.22</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=22179&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내외</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=254&wl_ref=list_mab_05_tr" class="hyrend"><span>#여름</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=11026&wl_ref=list_mab_05_tr" class="hyrend"><span>#선선한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=20560&wl_ref=list_mab_05_tr" class="hyrend"><span>#무더운 여름에 듣기좋은 노래</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="52761" sns_title="찌더움 없는 여름" sns_name="낭니"
+esalbum_id="52761" esalbum_title="찌더움 없는 여름" pd_nickname="낭니"
+layerPositionTarget="figure" class="btnActions" album_title="찌더움 없는 여름">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #ccc7b4;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/53002?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/530/53002.jpg" alt="2000년대 가요, 이별 후 그리움 슬픔 5 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/530/53002.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/337/33769.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/80079/8007941.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(53002,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/53002?wl_ref=list_mab_03_tr" class="title hyrend" title="2000년대 가요, 이별 후 그리움 슬픔 5" target="_self">2000년대 가요, 이별 후 그리움 슬픔 5</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4401?wl_ref=list_mab_04_tr" class="mPD hyrend" title="늘푸른꿈" target="_self">늘푸른꿈</a>
+<time date="">2022.05.18</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=433&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5432&wl_ref=list_mab_05_tr" class="hyrend"><span>#감성적인</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5712&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별/슬픔</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5810&wl_ref=list_mab_05_tr" class="hyrend"><span>#2000년대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=17822&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5960&wl_ref=list_mab_05_tr" class="hyrend"><span>#감미로운 가요 발라드 콜렉션</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=9897&wl_ref=list_mab_05_tr" class="hyrend"><span>#겨울이라 더욱 애절한 이별 감성곡</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34650&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대 국내 음악</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6148&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별을 주제로 한 Sad Ballad</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5607&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별을 주제로 한 노래</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="53002" sns_title="2000년대 가요, 이별 후 그리움 슬픔 5" sns_name="늘푸른꿈"
+esalbum_id="53002" esalbum_title="2000년대 가요, 이별 후 그리움 슬픔 5" pd_nickname="늘푸른꿈"
+layerPositionTarget="figure" class="btnActions" album_title="2000년대 가요, 이별 후 그리움 슬픔 5">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li class='lineBreak'>
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #0e1728;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/50759?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/507/50759.jpg" alt="도토리 굴러가유~ 추억가득 미니홈피 BGM 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/507/50759.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/95002/9500223.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/80161/8016131.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(50759,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/50759?wl_ref=list_mab_03_tr" class="title hyrend" title="도토리 굴러가유~ 추억가득 미니홈피 BGM" target="_self">도토리 굴러가유~ 추억가득 미니홈피 BGM</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/3557?wl_ref=list_mab_04_tr" class="mPD hyrend" title="yoDaa" target="_self">yoDaa</a>
+<time date="">2021.12.24</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=14499&wl_ref=list_mab_05_tr" class="hyrend"><span>#싸이월드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5810&wl_ref=list_mab_05_tr" class="hyrend"><span>#2000년대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=30528&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억 찾아 삼만리 싸이월드 BGM</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34650&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대 국내 음악</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34041&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 댄스/팝</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="50759" sns_title="도토리 굴러가유~ 추억가득 미니홈피 BGM" sns_name="yoDaa"
+esalbum_id="50759" esalbum_title="도토리 굴러가유~ 추억가득 미니홈피 BGM" pd_nickname="yoDaa"
+layerPositionTarget="figure" class="btnActions" album_title="도토리 굴러가유~ 추억가득 미니홈피 BGM">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #8bb877;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/50659?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/506/50659.jpg" alt="퇴근버스 플레이리스트 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/506/50659.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/203371/20337135.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/3462/346266.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(50659,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/50659?wl_ref=list_mab_03_tr" class="title hyrend" title="퇴근버스 플레이리스트" target="_self">퇴근버스 플레이리스트</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4402?wl_ref=list_mab_04_tr" class="mPD hyrend" title="jonyjonybaby" target="_self">jonyjonybaby</a>
+<time date="">2021.12.14</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=433&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5432&wl_ref=list_mab_05_tr" class="hyrend"><span>#감성적인</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=28177&wl_ref=list_mab_05_tr" class="hyrend"><span>#하교/퇴근길</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=4344&wl_ref=list_mab_05_tr" class="hyrend"><span>#버스</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=1648&wl_ref=list_mab_05_tr" class="hyrend"><span>#겨울</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=21648&wl_ref=list_mab_05_tr" class="hyrend"><span>#쌀쌀한 날</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=22180&wl_ref=list_mab_05_tr" class="hyrend"><span>#한파/추위</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=17822&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 발라드</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="50659" sns_title="퇴근버스 플레이리스트" sns_name="jonyjonybaby"
+esalbum_id="50659" esalbum_title="퇴근버스 플레이리스트" pd_nickname="jonyjonybaby"
+layerPositionTarget="figure" class="btnActions" album_title="퇴근버스 플레이리스트">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #65a5e3;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/49916?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/499/49916.jpg" alt="우리가 사랑한 2000년대 가요 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/499/49916.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/344/34418.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/80172/8017263.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(49916,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/49916?wl_ref=list_mab_03_tr" class="title hyrend" title="우리가 사랑한 2000년대 가요" target="_self">우리가 사랑한 2000년대 가요</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4178?wl_ref=list_mab_04_tr" class="mPD hyrend" title="ringring" target="_self">ringring</a>
+<time date="">2021.11.05</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=433&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5810&wl_ref=list_mab_05_tr" class="hyrend"><span>#2000년대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34644&wl_ref=list_mab_05_tr" class="hyrend"><span>#온라인 탑골공원</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=33940&wl_ref=list_mab_05_tr" class="hyrend"><span>#밀레니얼세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=17822&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="49916" sns_title="우리가 사랑한 2000년대 가요" sns_name="ringring"
+esalbum_id="49916" esalbum_title="우리가 사랑한 2000년대 가요" pd_nickname="ringring"
+layerPositionTarget="figure" class="btnActions" album_title="우리가 사랑한 2000년대 가요">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li class='lineBreak'>
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #ffa251;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/48996?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/489/48996.jpg" alt="싸이월드 공식 인기 BGM 25 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/489/48996.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/1713/171361.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/95002/9500295.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(48996,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/48996?wl_ref=list_mab_03_tr" class="title hyrend" title="싸이월드 공식 인기 BGM 25" target="_self">싸이월드 공식 인기 BGM 25</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/1?wl_ref=list_mab_04_tr" class="mPD hyrend" title="벅스PD" target="_self">벅스PD</a>
+<time date="">2021.08.30</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=14499&wl_ref=list_mab_05_tr" class="hyrend"><span>#싸이월드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=10236&wl_ref=list_mab_05_tr" class="hyrend"><span>#블로그</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=10036&wl_ref=list_mab_05_tr" class="hyrend"><span>#SNS</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34644&wl_ref=list_mab_05_tr" class="hyrend"><span>#온라인 탑골공원</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=38179&wl_ref=list_mab_05_tr" class="hyrend"><span>#MZ세대</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="48996" sns_title="싸이월드 공식 인기 BGM 25" sns_name="벅스PD"
+esalbum_id="48996" esalbum_title="싸이월드 공식 인기 BGM 25" pd_nickname="벅스PD"
+layerPositionTarget="figure" class="btnActions" album_title="싸이월드 공식 인기 BGM 25">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #52824e;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/48805?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/488/48805.jpg" alt="8090 추억소환 온라인 탑골공원 가을 특집 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/488/48805.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/158/15803.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/24/2408.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(48805,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/48805?wl_ref=list_mab_03_tr" class="title hyrend" title="8090 추억소환 온라인 탑골공원 가을 특집" target="_self">8090 추억소환 온라인 탑골공원 가을 특집</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/1425?wl_ref=list_mab_04_tr" class="mPD hyrend" title="KPOP매니아" target="_self">KPOP매니아</a>
+<time date="">2021.08.27</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34644&wl_ref=list_mab_05_tr" class="hyrend"><span>#온라인 탑골공원</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=781&wl_ref=list_mab_05_tr" class="hyrend"><span>#가을</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=33940&wl_ref=list_mab_05_tr" class="hyrend"><span>#밀레니얼세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=296&wl_ref=list_mab_05_tr" class="hyrend"><span>#드라이브</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5925&wl_ref=list_mab_05_tr" class="hyrend"><span>#가을감성 느껴지는 센티한 음악</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6035&wl_ref=list_mab_05_tr" class="hyrend"><span>#드라이브할때 듣기좋은 가요</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="48805" sns_title="8090 추억소환 온라인 탑골공원 가을 특집" sns_name="KPOP매니아"
+esalbum_id="48805" esalbum_title="8090 추억소환 온라인 탑골공원 가을 특집" pd_nickname="KPOP매니아"
+layerPositionTarget="figure" class="btnActions" album_title="8090 추억소환 온라인 탑골공원 가을 특집">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #262b31;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/47914?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/479/47914.jpg" alt="퍼피레드 하고 싶다 님의 미니파크 (1/30) 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/479/47914.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/80298/8029822.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/80095/8009572.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(47914,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/47914?wl_ref=list_mab_03_tr" class="title hyrend" title="퍼피레드 하고 싶다 님의 미니파크 (1/30)" target="_self">퍼피레드 하고 싶다 님의 미니파크 (1/30)</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/3981?wl_ref=list_mab_04_tr" class="mPD hyrend" title="BooHoo" target="_self">BooHoo</a>
+<time date="">2021.07.16</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=22179&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내외</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5810&wl_ref=list_mab_05_tr" class="hyrend"><span>#2000년대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=33940&wl_ref=list_mab_05_tr" class="hyrend"><span>#밀레니얼세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34650&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대 국내 음악</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="47914" sns_title="퍼피레드 하고 싶다 님의 미니파크 (1/30)" sns_name="BooHoo"
+esalbum_id="47914" esalbum_title="퍼피레드 하고 싶다 님의 미니파크 (1/30)" pd_nickname="BooHoo"
+layerPositionTarget="figure" class="btnActions" album_title="퍼피레드 하고 싶다 님의 미니파크 (1/30)">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li class='lineBreak'>
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #dad6d3;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/47428?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/474/47428.jpg" alt="사랑에 대한 가설들 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/474/47428.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/203694/20369432.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/40271/4027190.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(47428,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/47428?wl_ref=list_mab_03_tr" class="title hyrend" title="사랑에 대한 가설들" target="_self">사랑에 대한 가설들</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4177?wl_ref=list_mab_04_tr" class="mPD hyrend" title="나랑취향찰떡" target="_self">나랑취향찰떡</a>
+<time date="">2021.06.08</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=22179&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내외</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5729&wl_ref=list_mab_05_tr" class="hyrend"><span>#사랑/기쁨</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5712&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별/슬픔</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=21039&wl_ref=list_mab_05_tr" class="hyrend"><span>#사랑 그리고 이별 이야기</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="47428" sns_title="사랑에 대한 가설들" sns_name="나랑취향찰떡"
+esalbum_id="47428" esalbum_title="사랑에 대한 가설들" pd_nickname="나랑취향찰떡"
+layerPositionTarget="figure" class="btnActions" album_title="사랑에 대한 가설들">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #3e302d;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/46590?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/465/46590.jpg" alt="2000년대 갬성 싸이월드 사랑노래 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/465/46590.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/80034/8003496.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/164/16406.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(46590,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/46590?wl_ref=list_mab_03_tr" class="title hyrend" title="2000년대 갬성 싸이월드 사랑노래" target="_self">2000년대 갬성 싸이월드 사랑노래</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4080?wl_ref=list_mab_04_tr" class="mPD hyrend" title="써니레인" target="_self">써니레인</a>
+<time date="">2021.06.03</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=14499&wl_ref=list_mab_05_tr" class="hyrend"><span>#싸이월드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19140&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억/회상</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=433&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=17822&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34256&wl_ref=list_mab_05_tr" class="hyrend"><span>#인기 뮤직PD 앨범</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=30528&wl_ref=list_mab_05_tr" class="hyrend"><span>#추억 찾아 삼만리 싸이월드 BGM</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34650&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대 국내 음악</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34041&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 댄스/팝</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=13633&wl_ref=list_mab_05_tr" class="hyrend"><span>#고음질FLAC</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=38652&wl_ref=list_mab_05_tr" class="hyrend"><span>#HOT! 2021년 6월 인기 뮤직PD 앨범</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=39641&wl_ref=list_mab_05_tr" class="hyrend"><span>#HOT! 2021 인기 뮤직PD 앨범</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="46590" sns_title="2000년대 갬성 싸이월드 사랑노래" sns_name="써니레인"
+esalbum_id="46590" esalbum_title="2000년대 갬성 싸이월드 사랑노래" pd_nickname="써니레인"
+layerPositionTarget="figure" class="btnActions" album_title="2000년대 갬성 싸이월드 사랑노래">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li >
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #c7c4cf;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/46585?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/465/46585.jpg" alt="그 시절, 추억 속의 애절한 이별 이야기 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/465/46585.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/337/33769.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/80246/8024661.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(46585,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/46585?wl_ref=list_mab_03_tr" class="title hyrend" title="그 시절, 추억 속의 애절한 이별 이야기" target="_self">그 시절, 추억 속의 애절한 이별 이야기</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4222?wl_ref=list_mab_04_tr" class="mPD hyrend" title="Sloth" target="_self">Sloth</a>
+<time date="">2021.04.30</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=433&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=17822&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내 발라드</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34657&wl_ref=list_mab_05_tr" class="hyrend"><span>#Y세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=19612&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=38179&wl_ref=list_mab_05_tr" class="hyrend"><span>#MZ세대</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5712&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별/슬픔</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=13633&wl_ref=list_mab_05_tr" class="hyrend"><span>#고음질FLAC</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5607&wl_ref=list_mab_05_tr" class="hyrend"><span>#이별을 주제로 한 노래</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=34650&wl_ref=list_mab_05_tr" class="hyrend"><span>#8090세대 국내 음악</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="46585" sns_title="그 시절, 추억 속의 애절한 이별 이야기" sns_name="Sloth"
+esalbum_id="46585" esalbum_title="그 시절, 추억 속의 애절한 이별 이야기" pd_nickname="Sloth"
+layerPositionTarget="figure" class="btnActions" album_title="그 시절, 추억 속의 애절한 이별 이야기">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+<li class='lineBreak'>
+<figure class="musicPDAlbumInfo">
+<div class="thumbnails" style="background-color: #776251;">
+<a href="https://music.bugs.co.kr/musicpd/albumview/44758?wl_ref=list_mab_01_tr" target="_self">
+<span class="bg" type="NORMAL"></span>
+<span class="mask"></span>
+<div class="albumArt">
+<span class="cover"></span>
+<p class="album front">
+<img src="https://image.bugsm.co.kr/essential/images/130/447/44758.jpg" alt="쌍화차를 파는 커피숍에 들어가다 대표이미지" onerror="this.src='https://image.bugsm.co.kr/essential/images/original/447/44758.jpg'">
+</p>
+<p class="album middle">
+<img src="https://image.bugsm.co.kr/album/images/130/80079/8007941.jpg" alt="">
+</p>
+<p class="album back">
+<img src="https://image.bugsm.co.kr/album/images/130/40124/4012461.jpg" alt="">
+</p>
+</div>
+</a>
+<button onclick="bugs.music.listenEsalbum(44758,true);bugs.wiselog.area('list_mab_02_tr');" class="btnPlay" aria-label="새창">듣기</button>
+</div>
+<figcaption class="info">
+<a href="https://music.bugs.co.kr/musicpd/albumview/44758?wl_ref=list_mab_03_tr" class="title hyrend" title="쌍화차를 파는 커피숍에 들어가다" target="_self">쌍화차를 파는 커피숍에 들어가다</a>
+<p class="subInfo">
+<a href="https://music.bugs.co.kr/musicpd/pdlistdetail/4144?wl_ref=list_mab_04_tr" class="mPD hyrend" title="채리니" target="_self">채리니</a>
+<time date="">2021.02.23</time>
+</p>
+<p class="theme">
+<em>태그</em>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=5414&wl_ref=list_mab_05_tr" class="hyrend"><span>#국내</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=150&wl_ref=list_mab_05_tr" class="hyrend"><span>#가요</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=6128&wl_ref=list_mab_05_tr" class="hyrend"><span>#발라드한</span></a>
+<a href="https://music.bugs.co.kr/musicpd?tag_id=4178&wl_ref=list_mab_05_tr" class="hyrend"><span>#카페</span></a>
+</p>
+<a href="javascript:;"
+onclick="bugs.wiselog.area('list_mab_06_tr');bugs.layermenu.esAlbumMoreAction(this,
+{id:$(this).attr('sns_id'), title:$(this).attr('sns_title'), name:$(this).attr('sns_name')}, 'N', 'Y');"
+sns_from="ESALBUM" sns_id="44758" sns_title="쌍화차를 파는 커피숍에 들어가다" sns_name="채리니"
+esalbum_id="44758" esalbum_title="쌍화차를 파는 커피숍에 들어가다" pd_nickname="채리니"
+layerPositionTarget="figure" class="btnActions" album_title="쌍화차를 파는 커피숍에 들어가다">기타 기능</a>
+</figcaption>
+</figure>
+</li>
+</ul>
+			<div class="paging">
+				<a href="javascript:;" class="btnPrev icon">이전</a>
+				<span class="btnPrev icon">이전</span>
+				<a href="javascript:;" class="btnNext icon">다음</a>
+				<span class="btnNext icon">다음</span>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="sectionPadding contents" id="similarTrackArea" style="display:none;">
+	</section>
+
+
+
+	
+
+	<script>
+	$(document).ready(function(){
+		bugs.comment.data_getCommentList({comment_group_id:65724867});
+	});
+	</script>
+
+
+
+
+<section
+	id="comments"
+	class="commentsCommon sectionPadding"
+	cmt_area="comment_group"
+	cmt_ui="mtype"
+	cmt_load_first="Y"
+	cmt_comment_group_id="65724867"
+	cmt_content_type="TRACK"
+	cmt_target_id="80089182"
+	cmt_page="1"
+	cmt_sort_type="regdate"
+	cmt_direct_my_comment_id="0"
+	cmt_direct_comment_reply_id="0"
+	cmt_limit_comment_content_min_length="1"
+	cmt_limit_comment_content_max_length="300"
+	cmt_limit_reply_content_min_length="1"
+	cmt_limit_reply_content_max_length="300"
+	cmt_limit_oneday_comment="10"
+	cmt_limit_oneday_reply="20"
+	>
+	<div class="innerContainer">
+        <h1>한마디</h1>
+        <p class="desc">
+            (<span id="totalComment" cmt_disp_comment_count="65724867"></span>)
+        </p>
+
+		<a href="javascript:;" class="btnCommentInfo" cmt_area="showRuleBtn">한마디 운영 원칙</a>
+
+		<div class="clear"></div>
+
+
+
+
+		<fieldset class="writeComment">
+			<legend>한마디 등록 폼</legend>
+
+			<div class="cover">
+				<textarea name="" id="" cols="100" rows="10" cmt_area="commentContentEdit" title="한마디 입력"></textarea>
+				<span cmt_area="commentAttachArea"></span>
+                <span cmt_area="commentImageAttachArea"></span>
+			</div>
+
+			<style>
+			.pgSnackMusic div.btnAttach{
+				display:none;
+			}
+
+			</style>
+			<div class="btnAttach">
+				<button class="btnNormal btnAttachMusic" id="btnCommentAttachMusic" onclick="bugs.comment.attach_showSearchLayer({caller:this});bugs.comment.wiselog_attachMusicBtn()">음악 첨부</button>
+			</div>
+			<button class="btnWrite" cmt_area="commentWriteBtn">등록</button>
+			<span class="remain" cmt_area="contLenMonitor">(<em cmt_area="current">0</em>/<em cmt_area="max">300</em>)</span>
+		</fieldset>
+
+
+		<p class="sorting">
+			<button cmt_area="sortTypeBtn" cmt_sort_type_option="regdate"><span class="icon"></span>등록순</button>
+			<button cmt_area="sortTypeBtn" cmt_sort_type_option="good_cnt"><span class="icon"></span>호감순</button>
+			<button cmt_area="sortTypeBtn" cmt_sort_type_option="reply"><span class="icon"></span>답글순</button>
+		</p>
+
+
+		<p class="btns nextComments" cmt_area="prevPageBtnArea" style="display:none;">
+			<a href="javascript:;" class="btnMore" cmt_area="prevPageBtn">다음 한마디</a>
+		</p>
+
+		<ul class="listComments" cmt_area="commentlist"></ul>
+
+		<p class="btns" cmt_area="nextPageBtnArea" style="display:none;">
+			<a href="javascript:;" class="btnMore" cmt_area="nextPageBtn">이전 한마디</a>
+		</p>
+	</div>
+</section>
+
+
+</article>
+
+
+		</div>
+
+		<div class="floatingTop">
+			<a href="javascript:void(bugs.navigator.scrollTop())" class="btnTop">TOP</a>
+		</div>
+
+<script type="text/javascript" src="/js/jquery/jquery-dateFormat.min.js"></script>
+<script>
+$(window.document).ready(function() {
+			setTimeout(function(){
+				$.ajax({
+					url : g_urlAjax + "/board/notice/ajax/commonfooternotice",
+					type : "POST",
+					dataType : "json",
+					success : function(data){
+						if(data != null){
+							$("#commonFooterNotice a#commonFooterNoticeTitle").text(data.title);
+							$("#commonFooterNotice a#commonFooterNoticeTitle").attr("href", g_urlMusic + "/board/notice?srl=" + data.srl + "&wl_ref=M_footer_01_01");
+							$("#commonFooterNotice time").text(data.crt_dt);
+							$("#commonFooterNotice time").attr("datetime", $.format.date(Date.parse(data.crt_dt,"yyyy.MM.dd"), "yyyy-MM-dd"));
+						}
+					}
+				});
+			}, 1300);
+
+});
+</script>
+<script type="text/javascript" src="/js/bugs/bugs.footer.layer.js"></script>
+<footer id="footer"  >
+	<section class="sectionPadding">
+		<div class="innerContainer">
+			<div class="notice" id="commonFooterNotice">
+				<strong><a href="https://music.bugs.co.kr/board/notice?wl_ref=M_footer_01_01">공지사항</a></strong>
+				<a href="javascript:;" id="commonFooterNoticeTitle"></a>
+				<time datetime=""></time>
+			</div>
+			<div class="quicklinks">
+				<ul>
+					<li><a href="https://music.bugs.co.kr/event?wl_ref=M_footer_02_01">이벤트</a></li>
+					<li><a href="https://music.bugs.co.kr/panel?wl_ref=M_footer_02_01">벅스패널</a></li>
+				</ul>
+				<ul>
+					<li><a href="https://music.bugs.co.kr/serviceGuide/home?wl_ref=M_footer_02_07">벅스 꿀팁 보기</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionPadding contents">
+		<div class="innerContainer">
+<ul class="links">
+	<li><a href="http://www.bugscorp.co.kr?wl_ref=M_footer_03_01" target="_blank">회사소개</a></li>
+	<li><a href="https://music.bugs.co.kr/cooperation?wl_ref=M_footer_03_01">제휴문의</a></li>
+	<li><a href="https://music.bugs.co.kr/rules/use?wl_ref=M_footer_03_01">이용약관</a></li>
+	<li><a href="https://music.bugs.co.kr/rules/privacy?wl_ref=M_footer_03_01"><em>개인정보처리방침</em></a></li>
+	<li><a href="https://music.bugs.co.kr/rules/youth?wl_ref=M_footer_03_01">청소년보호정책</a></li>
+	<li><a href="https://music.bugs.co.kr/connect/center?wl_ref=M_footer_03_01">커넥트 센터</a></li>
+	<li><a href="http://help.bugs.co.kr?wl_ref=M_footer_03_01">고객센터</a></li>
+	<li><a href="https://music.bugs.co.kr/sitemap?wl_ref=M_footer_03_01">사이트맵</a></li>
+	<li><a href="https://inside.nhn.com/br/index.nhn" target="_blank">NHN 브랜드 사이트</a></li>
+</ul>
+
+<aside>
+	<div class="sns">
+		<a href="https://blog.naver.com/blog_bugs" onclick="bugs.wiselog.area('M_fotter_03_01');" target="_blank" class="blog">블로그</a>
+		<a href="https://www.facebook.com/bugsplay" onclick="bugs.wiselog.area('M_fotter_03_01');" target="_blank" class="facebook">페이스북</a>
+		<a href="https://story.kakao.com/ch/bugs" onclick="bugs.wiselog.area('M_fotter_03_01');" target="_blank" class="kakaostory">카카오스토리</a>
+	</div>
+
+	<div class="familysite">
+		<button tabindex="0" onclick="bugs.ui.cp.footerFamilySiteMenu(this);">FAMILY SITE</button>
+		<aside class="layer familysiteMenu">
+			<div class="box-shadow"></div>
+			<ul class="list-layer-select">
+				<li><a href="http://www.nhn.com" onclick="if(bugs.wiselog.area) {bugs.wiselog.area('M_fotter_03_01');}" target="_blank">NHN</a></li>
+				<li><a href="http://me.sayclub.com" onclick="if(bugs.wiselog.area) {bugs.wiselog.area('M_fotter_03_01');}" target="_blank">세이클럽</a></li>
+			</ul>
+		</aside>
+	</div>
+</aside>
+
+<address>
+	<span>(주)엔에이치엔벅스</span>
+	<span>13487 경기도 성남시 분당구 대왕판교로 645번길 16 플레이뮤지엄</span>
+	<span>대표이사 : 왕문주</span>
+	<span>고객센터 : <a href="mailto:help@help.bugs.co.kr">help@help.bugs.co.kr</a> / 1566-4882 (유료)</span><br />
+	<span>사업자등록번호 : 211-87-15555</span>
+	<span>통신판매업 신고번호 : 제 2013-경기성남-0532호</span>
+	<span>호스팅 제공자 : (주)엔에이치엔벅스</span>
+	<span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2118715555" target="_blank">사업자 정보 확인</a></span>
+	<span>© NHN Bugs Corp. All rights reserved.</span>
+</address>
+
+<script>
+
+if (!bugs.ui.cp) {
+	bugs.ui.cp = {
+		headerGameMenuToggle : function() {
+			$('.layer.gameMenu').toggle();
+
+			if(bugs.wiselog.area) {
+				bugs.wiselog.area('M_header_02_02');
+			}
+		},
+		footerFamilySiteMenu : function() {
+			$('.layer.familysiteMenu').toggle();
+
+			if(bugs.wiselog.area) {
+				bugs.wiselog.area('M_fotter_03_01');
+			}
+		}
+	};
+}
+
+</script>
+
+			<ul class="emblem">
+				<li><a href="https://music.bugs.co.kr/board/notice?srl=11259" onclick="bugs.wiselog.area('M_fotter_03_01');"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemGooglePlay.png" alt="Google Play 선정 2018 올해를 빛낸 앱" /></a></li>
+				<li><a href="https://music.bugs.co.kr/specialView/supersound/NJ6P8GAP0ERQFD84GUCF" onclick="bugs.wiselog.area('M_fotter_03_01');"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemHiRes.png" alt="하이 레졸루션 공식인증" /></a></li>
+				<li><a href="https://music.bugs.co.kr/board/notice?srl=7949" onclick="bugs.wiselog.area('M_fotter_03_01');"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemHerald.png" alt="2015 상반기 대학생선호브랜드 대상" /></a></li>
+				<li><a href="https://music.bugs.co.kr/board/notice?srl=5162" onclick="bugs.wiselog.area('M_fotter_03_01');"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemAppaward.png" alt="스마트앱어워드 대상 수상" /></a></li>
+				<li><a href="javascript:void(0);" onclick="bugs.footer.layer.showIsms();"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemISMSV202108.png" alt="정보보호 관리체계 ISMS 인증" /></a></li>
+				<li><a href="http://www.kdce.or.kr/user/ctf/clmsCtfTransList.do?NmberBusiRegNo=2118715555&amp;websiteName=www.bugs.co.kr" onclick="window.open(this.href,'','width=600,height=669');bugs.wiselog.area('M_fotter_03_01');return false;"  aria-label="새창"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemClms.png" alt="음악저작권 이용 허락 인증" /></a></li>
+				<li><a href="https://www.copyrightok.kr" onclick="bugs.wiselog.area('M_fotter_03_01');" target="_blank"  aria-label="새창"><img src="https://file.bugsm.co.kr/wbugs/common/footer/i_footerEmblemCopyrightok.png" alt="저작권OK" /></a></li>
+			</ul>
+		</div>
+	</section>
+</footer>
+
+	</div>
+<!--<a href="javascript:void(playlists.resetPlaylist())">리셋하기</a>-->
+<script type="text/javascript">
+$(document).ready(function(){
+	try{
+		bugs.navigator.addHyrendUnloadHandler(function(){playlists.playlistLayerHide();},"track2playlistForMoveHyrend", true);
+	}catch(e){}
+
+});
+</script>
+<aside id="track2playlist" class="layer layer-select addMyAlbum" style="display:none;">
+	<div class="box-shadow"></div>
+	<h1>내 앨범 목록</h1>
+	<div class="innerScroll" autoScroll="N" id="track2playlistScrollArea">
+		<ul class="list-layer-select">
+						<li><a href="javascript:;" onclick="$('#track2playlist').hide('blind', {}, 'normal', function() { bugs.ui.modalLayer.hide();playlists.make(); });" title="새 앨범 만들기">+ 새 앨범 만들기</a></li>
+		</ul>
+	</div>
+</aside>
+
+<!-- 레이어 - 내 앨범 수정 -->
+<aside id="editMyAlbumLayer" class="layer createMyAlbum" style="display:none; z-index:1002;">
+	<div class="box-shadow"></div>
+
+	<header class="layer-title">
+		<h1>앨범 정보 수정</h1>
+	</header>
+
+	<section class="layerContents">
+
+		<fieldset>
+			<legend>내 앨범 수정</legend>
+
+			<table class="formLayout">
+				<caption>내 앨범 수정 입력 폼</caption>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="editMyAlbumLayerPhoto" class="lb">사진</label></th>
+						<td>
+							<img src="https://file.bugsm.co.kr/wbugs/common/i_defaultMyAlbum_50x50.png" id="editMyAlbumLayerPhoto_img" alt="" class="thumb">
+							<div class="inputFile">
+								<input type="text" id="editMyAlbumLayerPhoto" class="file"  diabled />
+								<button class="btnNormal" type="button" id="searchImage">찾아보기</button>
+								<input type="hidden" id="editMyAlbumLayerPhoto_path" title="사진경로" />
+							</div>
+						</td>
+						<td class="right" style="width:55px;"></td>
+					</tr>
+					<tr>
+						<th scope="row" style="width:55px;"><label for="editMyAlbumLayerTitle" class="lb">제목</label></th>
+						<td><input type="text" id="editMyAlbumLayerTitle" class="txt" value="111"></td>
+						<td class="right" style="width:55px;"><span class="remain" id="editMyAlbumLayerTitleRemain">(0/100)</span></td>
+					</tr>
+					<tr>
+						<th  scope="row"><label for="editMyAlbumLayerDescribe" class="lb">설명</label></th>
+						<td>
+							<textarea name=""  id="editMyAlbumLayerDescribe" cols="30" rows="10" class="txtArea"></textarea>
+						</td>
+						<td class="right"><span class="remain" id="editMyAlbumLayerDescribeRemain">(0/300)</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="btns">
+				<button id="editMyAlbumLayerUpdate" btnType="ok" class="btnNormal">저장</button>
+				<button id="editMyAlbumLayerCancel" btnType="cancel" class="btnNormal">취소</button>
+			</p>
+		</fieldset>
+
+	</section>
+	<button class="btnClose" btnType="close" id="editMyAlbumLayerClose">닫기</button>
+</aside>
+
+
+<aside id="createMyAlbumLayer" class="layer createMyAlbum" style="display:none; z-index:1000;">
+	<div class="box-shadow"></div>
+
+	<header class="layer-title">
+		<h1 id="createMyAlbumLayerHeader"></h1> 
+	</header>
+
+	<section class="layerContents">
+
+		<fieldset>
+			<legend id="createMyAlbumLayerLegend"></legend> 
+
+			<div class="row">
+				<label for="createMyAlbumLayerTitle">제목</label>
+				<div class="col">
+					<input type="text" id="createMyAlbumLayerTitle" class="txt" value="">
+					<span class="remain" id="createMyAlbumLayerTitleRemain">(0/100)</span>
+				</div>
+			</div>
+
+			<div class="btns">
+				<button id="createMyAlbumLayerUpdate" btnType="ok" class="btnNormal strong">저장</button>
+				<button id="createMyAlbumLayerCancel" btnType="cancel" class="btnNormal">취소</button>
+			</div>
+		</fieldset>
+
+	</section>
+	<button class="btnClose" btnType="close" id="crerateMyAlbumLayerClose">닫기</button>
+</aside>
+<span id="removeSpecialCharTarget" style="display:none;"></span>
+<script>
+try{
+	bugs.navigator.setLeftMenuShowOnLoad();
+}
+catch(e){}
+$(document).ready(function(){
+	var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+	if(isFirefox){
+		$("#skipNav").css({top:"1px", left:"1px"});
+	}
+});
+</script>
+
+<!-- 470517  -->
+<script>
+try {
+		var expTime = (new Date()).getTime() + (60*60*24*30*1000);
+	var expTime2 = (new Date()).getTime() - (60*5*1000);
+	    bugs.cookie.set("last_login_log_date_cookie","", expTime2, "/", "bugs.co.kr");
+}
+catch(e){}
+</script>
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script>
+<script type="text/javascript">
+    if (!wcs_add) var wcs_add={};
+    wcs_add["wa"] = "s_595467f7a42";
+    if (!_nasa) var _nasa={};
+    wcs.inflow("bugs.co.kr");
+    wcs_do(_nasa);
+</script>
+</body>
+</html>

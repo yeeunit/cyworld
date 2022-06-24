@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box; /* 기본 박스사이징은 콘텐츠박스이기 때문에 동일하게 맞춰줘야함*/
+        }
+
+        div {
+            width: 80px;
+            height: 80px;
+            border: 2px solid red;
+        }
+
+        /*
+        #bb{
+            box-sizing: border-box;
+        }
+
+        #cb{
+            box-sizing: content-box;
+        }
+
+        flex : 여러 태그를 하나로 묶어서 
+        disply
+        */
+
+        .pb{
+            width: 500px;
+            height: 320px;
+            border: 2px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+           }
+
+    </style>
+</head>
+
+<body>
+
+    <div>박스1</div>
+
+    <div class="pb">
+        <div>박스2</div>
+        <div id="cb">박스3</div>
+        <div>박스 4</div>
+    </div>
+    
+    <div>박스 5</div>
+        
+</body>
+</html>

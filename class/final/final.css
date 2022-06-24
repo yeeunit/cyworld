@@ -1,0 +1,184 @@
+*{
+    margin: 0 auto;
+}
+
+.wrap{
+    Width : 540px;
+    Height : 960px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    padding: 40px
+}
+.title{
+    Width : 380px;
+    Height : 47px;
+    color: #0068FF;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.bodywrap{
+    box-sizing: border-box;
+    width: 380px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 60px;
+    color: #797979;
+    margin-left: 20px;
+}
+
+.phone__Number{
+    display: flex;
+    flex-direction: row;
+    margin: 20px
+
+}
+.phone__Number input{
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;   
+}
+
+/* 전화번호 입력 */
+
+.confirm__Number{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 40px;
+}
+#confirm__Number{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: right;
+    color: #0068FF;
+    margin-right: 20px;
+}
+#confirm__Number__Btn{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #0068FF;
+    box-sizing: border-box;
+    width: 120px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+}
+
+.confirm__Time{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+#confirm__Time{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: right;
+    color: #0068FF;
+    margin-right: 20px;
+}
+
+#confirm__Time__Btn{
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background: #0068FF;
+    color: white;
+    box-sizing: border-box;
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    border: 1px solid #D2D2D2;
+}
+
+.where{
+    
+}
+
+.where select{
+    width: 380px;
+    height: 60px;   
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #797979;
+    margin: 20px 10px 20px 40px;
+    padding-left: 15px;
+
+}
+
+.gender{
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    color: #000000;
+    width: 200px;
+}
+
+.gender input{
+    width: 20px;
+    height: 19.95px;
+    background: #EBEBEB;
+    border: 1px solid #D2D2D2;
+}
+.line{
+    width: 380px;
+    height: 1px;
+    left: 770px;
+    top: 928.94px;
+    background: #E6E6E6;
+    margin-top: 10px;
+}
+.join{
+    margin: 30px 10px 0px 40px;
+}
+
+.join button{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #0068FF;
+    box-sizing: border-box;
+    width: 380px;
+    height: 75px;
+    left: 770px;
+    background: #FFFFFF;
+    border: 1px solid #0068FF;
+    border-radius: 10px;
+}
