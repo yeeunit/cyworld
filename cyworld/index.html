@@ -1,157 +1,167 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <title>정예은님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <script src="https://kit.fontawesome.com/6c6d1c75ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/6c6d1c75ae.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
+      function menuHome() {
+        document
+          .getElementById("contentFrame")
+          .setAttribute("src", "home.html");
 
-        function menuHome() {
-            document.getElementById("contentFrame").setAttribute("src","home.html")
+        document.getElementById("menuHome").style =
+          "color: black; background-color: white;";
+        document.getElementById("menuGame").style =
+          "color: white; background-color: #298EB5";
+        document.getElementById("menuJukebox").style =
+          "color: white; background-color: #298EB5";
+      }
 
-            document.getElementById("menuHome").style = "color: black; background-color: white;"
-            document.getElementById("menuGame").style = "color: white; background-color: #298EB5"
-            document.getElementById("menuJukebox").style = "color: white; background-color: #298EB5"
+      const menuGame = function () {
+        document
+          .getElementById("contentFrame")
+          .setAttribute("src", "game.html");
+        document.getElementById("menuGame").style =
+          "color: black; background-color: white;";
+        document.getElementById("menuHome").style =
+          "color: white; background-color: #298EB5";
+        document.getElementById("menuJukebox").style =
+          "color: white; background-color: #298EB5";
+      };
 
-        }
-
-        const menuGame = function(){
-            document.getElementById("contentFrame").setAttribute("src","game.html")
-            document.getElementById("menuGame").style = "color: black; background-color: white;"
-            document.getElementById("menuHome").style = "color: white; background-color: #298EB5"
-            document.getElementById("menuJukebox").style = "color: white; background-color: #298EB5"
-
-        }
-
-        const menuJukebox = () => {
-            document.getElementById("contentFrame").setAttribute("src","bgm.html")
-            document.getElementById("menuJukebox").style = "color: black; background-color: white;"
-            document.getElementById("menuGame").style = "color: white; background-color: #298EB5"
-            document.getElementById("menuHome").style = "color: white; background-color: #298EB5"
-
-        }
-
+      const menuJukebox = () => {
+        document.getElementById("contentFrame").setAttribute("src", "bgm.html");
+        document.getElementById("menuJukebox").style =
+          "color: black; background-color: white;";
+        document.getElementById("menuGame").style =
+          "color: white; background-color: #298EB5";
+        document.getElementById("menuHome").style =
+          "color: white; background-color: #298EB5";
+      };
     </script>
+  </head>
 
-
-</head>
-
-<body>
-<div class="background">
-<div class="outerbox">
-    <div class="wrapper">
-
-
-    <!-- 왼쪽 영역 -->
-    <div class="wrapper__left">
-        <div class="wrapper__left__header">
-            <div class="today">
-            TODAY 
-            <span> 1004 </span> &nbsp; | &nbsp;  TOTAL 1,000,000
+  <body>
+    <div class="background">
+      <div class="outerbox">
+        <div class="wrapper">
+          <!-- 왼쪽 영역 -->
+          <div class="wrapper__left">
+            <div class="wrapper__left__header">
+              <div class="today">
+                TODAY
+                <span> 1004 </span> &nbsp; | &nbsp; TOTAL 1,000,000
+              </div>
             </div>
-        </div>
 
-        <!-- 왼쪽 바디 흰바탕 -->
-        <div class="wrapper__left__body">
-
-            <div class="left__body__header">
+            <!-- 왼쪽 바디 흰바탕 -->
+            <div class="wrapper__left__body">
+              <div class="left__body__header">
                 <div class="left__body__header__gray">
-                    <img class="profile_photo" src="./images/beauty_1651748033857.JPG" alt="프로필사진">
+                  <img
+                    class="profile_photo"
+                    src="./images/profile0.png"
+                    alt="프로필사진"
+                  />
                 </div>
                 <div class="left__body__header__line"></div>
-            </div>
+              </div>
 
-            <!-- 왼쪽 바디 프로필 -->
-            <div class="left__body__profile">
-                
+              <!-- 왼쪽 바디 프로필 -->
+              <div class="left__body__profile">
                 <div class="profile__detail">
-                <i class="fa-regular fa-face-grin-beam"></i> 
-                Name
-                </div>
-
-                <div class="profile__detail">
-                <i class="fa-solid fa-phone"></i>
-                Phone
+                  <i class="fa-regular fa-face-grin-beam"></i>
+                  Name
                 </div>
 
                 <div class="profile__detail">
-                <i class="fa-solid fa-envelope"></i>
-                E-mail
+                  <i class="fa-solid fa-phone"></i>
+                  Phone
                 </div>
 
                 <div class="profile__detail">
-                <i class="fa-solid fa-sun"></i>
-                Instagram
+                  <i class="fa-solid fa-envelope"></i>
+                  E-mail
                 </div>
 
-            </div>
-
-            <!-- 오늘의 기분 -->
-            <div class="left__body__footer">
-            
-                <div class="mood">
-                오늘의 기분 <br><br>
+                <div class="profile__detail">
+                  <i class="fa-solid fa-sun"></i>
+                  Instagram
                 </div>
+              </div>
+
+              <!-- 오늘의 기분 -->
+              <div class="left__body__footer">
+                <div class="mood">오늘의 기분 <br /><br /></div>
 
                 <select name="" id="">
-                <option value="">기쁨 😄</option>
-                <option value="">사랑 😍</option>
-                <option value="">슬픔 😥</option>
-                <option value="">우울 😞</option>
-                <option value="">화남 😤</option>
+                  <option value="">기쁨 😄</option>
+                  <option value="">사랑 😍</option>
+                  <option value="">슬픔 😥</option>
+                  <option value="">우울 😞</option>
+                  <option value="">화남 😤</option>
                 </select>
-                
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽 영역 -->
+          <div class="wrapper__right">
+            <!-- 오른쪽 머리-->
+            <div class="wrapper__right__header">
+              <div class="right__header__title">사이좋은 사람들, 싸이월드</div>
+
+              <div class="private">
+                <a href=""> 사생활보호설정 <span>▶</span> </a>
+              </div>
             </div>
 
+            <!-- 오른쪽 바디 -->
+            <div class="wrapper__right__body">
+              <!-- 홈페이지 -->
+              <iframe
+                id="contentFrame"
+                src="home.html"
+                frameborder="0"
+              ></iframe>
+
+              <!-- 게임 페이지 -->
+              <!-- <iframe src="game.html" frameborder="0"></iframe> -->
+
+              <!-- 주크박스 페이지 -->
+              <!-- <iframe src="bgm.html" frameborder="0"></iframe> -->
+            </div>
+          </div>
         </div>
-
-    </div>
-
-    <!-- 오른쪽 영역 -->
-    <div class="wrapper__right">
-    
-    <!-- 오른쪽 머리-->
-        <div class="wrapper__right__header">
-        <div class="right__header__title"> 사이좋은 사람들, 싸이월드 </div>
-        
-        <div class="private"> 
-        <a href=""> 사생활보호설정 <span>▶</span> </a> </div>
+        <!-- 메뉴 탭 네비게이션-->
+        <div class="navigation">
+          <div class="navigation__item" id="menuHome" onclick="menuHome()">
+            홈
+          </div>
+          <div class="navigation__item" id="menuGame" onclick="menuGame()">
+            게임
+          </div>
+          <div
+            class="navigation__item"
+            id="menuJukebox"
+            onclick="menuJukebox()"
+          >
+            쥬크박스
+          </div>
         </div>
-
-    <!-- 오른쪽 바디 -->
-        <div class="wrapper__right__body">
-
-        
-    <!-- 홈페이지 -->        
-        <iframe id="contentFrame" src="home.html" frameborder="0"></iframe>
-    
-    <!-- 게임 페이지 -->
-        <!-- <iframe src="game.html" frameborder="0"></iframe> -->
-
-    <!-- 주크박스 페이지 -->
-        <!-- <iframe src="bgm.html" frameborder="0"></iframe> -->
-
-        </div>
-
+      </div>
     </div>
-
-    </div>
-    <!-- 메뉴 탭 네비게이션-->
-    <div class="navigation">
-        <div class="navigation__item" id="menuHome" onclick="menuHome()">홈</div>
-        <div class="navigation__item" id="menuGame" onclick="menuGame()">게임</div>
-        <div class="navigation__item" id="menuJukebox" onclick="menuJukebox()">쥬크박스</div>
-
-    </div>
-
-</div>
-</div>
-
-</body>
+  </body>
 </html>
